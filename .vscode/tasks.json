@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Static Server",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\.vscode\\start-server.ps1"
+            ],
+            "isBackground": false,
+            "presentation": {
+                "showReuseMessage": false,
+                "reveal": "never",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Kill Server",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Stop-Process -Name python -Force -ErrorAction SilentlyContinue; Write-Host 'Server stopped.'"
+            ],
+            "presentation": {
+                "reveal": "never"
+            }
+        }
+    ]
+}
