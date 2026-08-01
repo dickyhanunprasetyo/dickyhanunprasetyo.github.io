@@ -184,19 +184,27 @@
 
     const startProgressSimulation = () => {
       loadInterval = setInterval(() => {
-        // Realistic loading curve: slow and steady
+        // Faster loading curve: reaches 100% quickly
         if (loadProgress < 40) {
-          loadProgress += 1.2 + Math.random() * 2;
+          loadProgress += 2.5 + Math.random() * 3;
         } else if (loadProgress < 70) {
-          loadProgress += 0.8 + Math.random() * 1.4;
+          loadProgress += 1.5 + Math.random() * 2.5;
         } else if (loadProgress < 90) {
-          loadProgress += 0.4 + Math.random() * 0.8;
-        } else if (loadProgress < 97) {
-          loadProgress += 0.2 + Math.random() * 0.4;
+          loadProgress += 1.2 + Math.random() * 1.8;
+        } else if (loadProgress < 100) {
+          loadProgress += 0.8 + Math.random() * 1.2;
         }
-        if (loadProgress > 97) loadProgress = 97;
+        if (loadProgress >= 100) {
+          loadProgress = 100;
+          updateProgressBar();
+          clearInterval(loadInterval);
+          // Progress is full — show completion and dismiss
+          showLoadingComplete();
+          setTimeout(dismissSplash, 600);
+          return;
+        }
         updateProgressBar();
-      }, 220);
+      }, 160);
     };
 
     const completeProgress = () => {
@@ -217,7 +225,7 @@
 
     // Track actual start time for minimum display duration
     const splashStartTime = Date.now();
-    const MIN_SPLASH_DURATION = 2800; // Minimum 2.8 seconds display
+    const MIN_SPLASH_DURATION = 1800; // Minimum 1.8 seconds display
 
     // Generate floating splash particles
     if (splashParticlesContainer && !reducedMotion) {
@@ -286,24 +294,39 @@
       const elapsed = Date.now() - splashStartTime;
       const remaining = Math.max(0, MIN_SPLASH_DURATION - elapsed);
 
-      // Wait for minimum duration, then complete and dismiss
+      // If progress hasn't reached 100% yet, speed it up
       setTimeout(() => {
-        completeProgress();
-        // Show "READY ✓" completion text
-        showLoadingComplete();
-        // Hold at completion, then dismiss
-        setTimeout(dismissSplash, 900);
+        if (loadProgress < 100 && loadInterval) {
+          clearInterval(loadInterval);
+          // Rapidly finish the remaining progress
+          const rushTo100 = () => {
+            if (loadProgress < 100) {
+              loadProgress += 3;
+              if (loadProgress > 100) loadProgress = 100;
+              updateProgressBar();
+              if (loadProgress < 100) {
+                requestAnimationFrame(() => setTimeout(rushTo100, 25));
+              } else {
+                showLoadingComplete();
+                setTimeout(dismissSplash, 500);
+              }
+            }
+          };
+          rushTo100();
+        }
       }, remaining);
     });
 
     // Fallback: force dismiss after timeout in case load event doesn't fire
     setTimeout(() => {
       if (!splashScreen.classList.contains("splash-out")) {
-        completeProgress();
+        if (loadInterval) clearInterval(loadInterval);
+        loadProgress = 100;
+        updateProgressBar();
         showLoadingComplete();
-        setTimeout(dismissSplash, 900);
+        setTimeout(dismissSplash, 500);
       }
-    }, 8000);
+    }, 5000);
   }
 
   /**
