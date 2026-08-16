@@ -730,7 +730,7 @@
       about_title: "About Me",
       about_sub: "Get to know more about me",
       about_bio:
-        "I am a final-year student in the Information Technology Department, majoring in Applied Bachelor of Business Information Systems at Politeknik Negeri Malang. I have a strong work ethic and experience using various applications such as Visual Studio Code, Database Management Systems, Pentaho Data Integration, Postman, and Power BI Desktop. I am disciplined, able to work well in teams, and quickly adapt to new environments. I have experience leading and being a team member in academic projects.",
+        "I hold a Bachelor of Applied Business Information Systems degree from Politeknik Negeri Malang, Department of Information Technology. Experienced in Project Management, full-stack web development, and AI chatbot development. Accustomed to designing and building applications from frontend to backend, managing databases, and integrating AI technologies to create interactive and adaptive chatbots. Experienced in leading and managing projects, coordinating teams, preparing work plans, and ensuring projects meet their goals and targets. Able to work independently and in teams, with strong problem-solving skills, and quick to adapt to new technologies and work environments.",
       soft_title: "Soft Skills",
       tech_title: "Tech Stack",
       skill_english: "Speaking English",
@@ -822,7 +822,7 @@
       about_title: "Tentang Saya",
       about_sub: "Kenali saya lebih dekat",
       about_bio:
-        "Saya seorang mahasiswa semester akhir Jurusan Teknologi Informasi dengan Program Studi Sarjana Terapan Sistem Informasi Bisnis dari Politeknik Negeri Malang. Memiliki semangat kerja tinggi dan pengalaman menggunakan berbagai aplikasi seperti Visual Studio Code, Database Management System, Pentaho Data Integration, Postman, dan Power BI Desktop. Disiplin, mampu bekerja dengan baik dalam tim, serta beradaptasi di lingkungan baru dengan cepat. Telah berpengalaman dalam memimpin dan menjadi anggota tim pada proyek akademik.",
+        "Saya merupakan lulusan Sarjana Terapan Sistem Informasi Bisnis dari Politeknik Negeri Malang, Jurusan Teknologi Informasi. Memiliki pengalaman dalam Project Management, pengembangan aplikasi web secara fullstack, serta pengembangan AI chatbot. Terbiasa merancang dan mengembangkan aplikasi dari sisi frontend hingga backend, mengelola database, serta mengintegrasikan teknologi AI untuk membangun chatbot yang interaktif dan adaptif. Memiliki pengalaman dalam memimpin dan mengelola proyek, mengoordinasikan tim, menyusun perencanaan kerja, serta memastikan proyek berjalan sesuai tujuan dan target yang ditetapkan. Mampu bekerja secara mandiri maupun dalam tim, memiliki kemampuan problem solving yang baik, dan cepat beradaptasi dengan teknologi serta lingkungan kerja baru.",
       soft_title: "Soft Skills",
       tech_title: "Tech Stack",
       skill_english: "Berbahasa Inggris",
