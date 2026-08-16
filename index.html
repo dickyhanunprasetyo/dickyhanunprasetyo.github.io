@@ -44,22 +44,22 @@
     <script>
       (function () {
         try {
-          var stored = localStorage.getItem('mdhp-portfolio-theme');
+          var stored = localStorage.getItem("mdhp-portfolio-theme");
           var theme =
-            stored === 'light' || stored === 'dark'
+            stored === "light" || stored === "dark"
               ? stored
               : window.matchMedia &&
-                  window.matchMedia('(prefers-color-scheme: light)').matches
-                ? 'light'
-                : 'dark';
-          document.documentElement.setAttribute('data-theme', theme);
-          document.documentElement.setAttribute('data-bs-theme', theme);
-          var storedLang = localStorage.getItem('mdhp-portfolio-lang');
+                  window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.setAttribute("data-bs-theme", theme);
+          var storedLang = localStorage.getItem("mdhp-portfolio-lang");
           document.documentElement.lang =
-            storedLang === 'en' || storedLang === 'id' ? storedLang : 'id';
+            storedLang === "en" || storedLang === "id" ? storedLang : "id";
         } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          document.documentElement.setAttribute('data-bs-theme', 'dark');
+          document.documentElement.setAttribute("data-theme", "dark");
+          document.documentElement.setAttribute("data-bs-theme", "dark");
         }
       })();
     </script>
@@ -81,7 +81,7 @@
     />
 
     <!-- Main CSS File -->
-    <link href="assets/css/main.css?v=8" rel="stylesheet" />
+    <link href="assets/css/main.css?v=15" rel="stylesheet" />
   </head>
 
   <body class="index-page">
@@ -92,17 +92,45 @@
       <div
         class="container-fluid container-xl d-flex align-items-center justify-content-between"
       >
-        <a href="index.html" class="logo d-flex align-items-center" aria-label="Back to top">
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center"
+          aria-label="Back to top"
+        >
           <span class="logo-mark" aria-hidden="true">
-            <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              class="logo-svg"
+              viewBox="0 0 40 40"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <!-- Tech bracket frame -->
-              <path d="M12 8L6 20L12 32" fill="none" stroke="currentColor" stroke-width="3"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M28 8L34 20L28 32" fill="none" stroke="currentColor" stroke-width="3"
-                stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M12 8L6 20L12 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M28 8L34 20L28 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
               <!-- Center slash -->
-              <line x1="22" y1="10" x2="16" y2="30" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" opacity="0.7" />
+              <line
+                x1="22"
+                y1="10"
+                x2="16"
+                y2="30"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                opacity="0.7"
+              />
             </svg>
           </span>
           <h1 class="sitename">DICKY<span class="logo-accent">.</span>PRAS</h1>
@@ -110,7 +138,9 @@
 
         <nav id="navmenu" class="navmenu" aria-label="Main navigation">
           <ul>
-            <li><a href="#hero" class="active" data-i18n="nav_home">Home</a></li>
+            <li>
+              <a href="#hero" class="active" data-i18n="nav_home">Home</a>
+            </li>
             <li><a href="#about" data-i18n="nav_about">About</a></li>
             <li><a href="#CV" data-i18n="nav_cv">CV</a></li>
             <li><a href="#portfolio" data-i18n="nav_projects">Projects</a></li>
@@ -177,11 +207,15 @@
                 <span data-i18n="hero_status">Available for opportunities</span>
               </p>
               <h2 class="hero-title">
-                <span id="animated-name" data-name="Mochammad Dicky Hanun Prasetyo"
+                <span
+                  id="animated-name"
+                  data-name="Mochammad Dicky Hanun Prasetyo"
                   >Mochammad Dicky Hanun Prasetyo</span
                 >
               </h2>
-              <p class="hero-role">Full Stack Developer</p>
+              <p class="hero-role">
+                <span data-i18n="devcard_focus_1">Project Manager</span>
+              </p>
               <p class="hero-desc" data-i18n="hero_desc">
                 Building scalable web applications from backend systems to
                 responsive frontend experiences.
@@ -196,7 +230,10 @@
                 ></span>
               </p>
               <div class="hero-cta">
-                <a href="#portfolio" class="btn-primary-modern" data-i18n="hero_cta_projects"
+                <a
+                  href="#portfolio"
+                  class="btn-primary-modern"
+                  data-i18n="hero_cta_projects"
                   >View Projects</a
                 >
                 <a
@@ -211,7 +248,10 @@
                   >Find me on</span
                 >
                 <div class="social-links">
-                  <a href="https://github.com/dickyhanunprasetyo" aria-label="GitHub" title="GitHub"
+                  <a
+                    href="https://github.com/dickyhanunprasetyo"
+                    aria-label="GitHub"
+                    title="GitHub"
                     ><i class="bi bi-github"></i
                   ></a>
                   <a
@@ -220,7 +260,10 @@
                     title="LinkedIn"
                     ><i class="bi bi-linkedin"></i
                   ></a>
-                  <a href="https://instagram.com/mcdicky_mdhp" aria-label="Instagram" title="Instagram"
+                  <a
+                    href="https://instagram.com/mcdicky_mdhp"
+                    aria-label="Instagram"
+                    title="Instagram"
                     ><i class="bi bi-instagram"></i
                   ></a>
                   <a
@@ -248,27 +291,52 @@
                 </div>
                 <div class="dev-card-body">
                   <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_role">Role</span>
+                    <span class="dev-label mono" data-i18n="devcard_role"
+                      >Role</span
+                    >
                     <span class="dev-value">Full Stack Developer</span>
                   </div>
                   <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_focus">Focus</span>
-                    <span class="dev-value" data-i18n="devcard_focus_val"
-                      >Web Development · Backend Systems · AI Integration</span
+                    <span class="dev-label mono" data-i18n="devcard_focus"
+                      >Focus</span
+                    >
+                    <div class="dev-focus-rotator" id="focusRotator">
+                      <div class="dev-focus-viewport">
+                        <div class="dev-focus-slide">
+                          <span
+                            class="dev-focus-text"
+                            data-i18n="devcard_focus_1"
+                            >Project Manager</span
+                          >
+                        </div>
+                      </div>
+                      <div class="dev-focus-dots" aria-hidden="true">
+                        <span class="focus-dot active"></span>
+                        <span class="focus-dot"></span>
+                        <span class="focus-dot"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dev-row">
+                    <span class="dev-label mono" data-i18n="devcard_stack"
+                      >Stack</span
+                    >
+                    <span class="dev-value mono"
+                      >Laravel · React · Python · MySQL</span
                     >
                   </div>
                   <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_stack">Stack</span>
-                    <span class="dev-value mono">Laravel · React · Python · MySQL</span>
-                  </div>
-                  <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_location">Location</span>
+                    <span class="dev-label mono" data-i18n="devcard_location"
+                      >Location</span
+                    >
                     <span class="dev-value" data-i18n="devcard_location_val"
                       >Malang, Indonesia</span
                     >
                   </div>
                   <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_status">Status</span>
+                    <span class="dev-label mono" data-i18n="devcard_status"
+                      >Status</span
+                    >
                     <span class="dev-value status-ok"
                       ><span class="status-dot" aria-hidden="true"></span>
                       <span data-i18n="devcard_available">Available</span></span
@@ -287,19 +355,27 @@
           <div class="stats-bar" data-aos="fade-up" data-aos-delay="100">
             <div class="stat-item">
               <span class="stat-value mono" id="statProjects">00+</span>
-              <span class="stat-label mono" data-i18n="stat_projects">Projects</span>
+              <span class="stat-label mono" data-i18n="stat_projects"
+                >Projects</span
+              >
             </div>
             <div class="stat-item">
               <span class="stat-value mono" id="statTech">00+</span>
-              <span class="stat-label mono" data-i18n="stat_tech">Tech Stack</span>
+              <span class="stat-label mono" data-i18n="stat_tech"
+                >Tech Stack</span
+              >
             </div>
             <div class="stat-item">
               <span class="stat-value mono">Full Stack</span>
               <span class="stat-label mono" data-i18n="stat_focus">Focus</span>
             </div>
             <div class="stat-item">
-              <span class="stat-value mono" data-i18n="stat_available">Available</span>
-              <span class="stat-label mono" data-i18n="stat_status">Status</span>
+              <span class="stat-value mono" data-i18n="stat_available"
+                >Available</span
+              >
+              <span class="stat-label mono" data-i18n="stat_status"
+                >Status</span
+              >
             </div>
           </div>
         </div>
@@ -309,7 +385,9 @@
       <section id="about" class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <p class="section-eyebrow mono" data-i18n="about_eyebrow">About / Profile</p>
+          <p class="section-eyebrow mono" data-i18n="about_eyebrow">
+            About / Profile
+          </p>
           <h1 data-i18n="about_title">About Me</h1>
           <div class="section-divider"></div>
           <p data-i18n="about_sub">Get to know more about me</p>
@@ -331,15 +409,19 @@
             <div class="col-lg-8">
               <h3 class="about-name">Mochammad Dicky Hanun Prasetyo</h3>
               <p class="about-bio" data-i18n="about_bio">
-                Saya seorang mahasiswa semester akhir Jurusan Teknologi
-                Informasi dengan Program Studi Sarjana Terapan Sistem Informasi
-                Bisnis dari Politeknik Negeri Malang. Memiliki semangat kerja
-                tinggi dan pengalaman menggunakan berbagai aplikasi seperti
-                Visual Studio Code, Database Management System, Pentaho Data
-                Integration, Postman, dan Power BI Desktop. Disiplin, mampu
-                bekerja dengan baik dalam tim, serta beradaptasi di lingkungan
-                baru dengan cepat. Telah berpengalaman dalam memimpin dan
-                menjadi anggota tim pada proyek akademik.
+                Saya merupakan lulusan Sarjana Terapan Sistem Informasi Bisnis
+                dari Politeknik Negeri Malang, Jurusan Teknologi Informasi.
+                Memiliki pengalaman dalam Project Management, pengembangan
+                aplikasi web secara fullstack, serta pengembangan AI chatbot.
+                Terbiasa merancang dan mengembangkan aplikasi dari sisi frontend
+                hingga backend, mengelola database, serta mengintegrasikan
+                teknologi AI untuk membangun chatbot yang interaktif dan
+                adaptif. Memiliki pengalaman dalam memimpin dan mengelola
+                proyek, mengoordinasikan tim, menyusun perencanaan kerja, serta
+                memastikan proyek berjalan sesuai tujuan dan target yang
+                ditetapkan. Mampu bekerja secara mandiri maupun dalam tim,
+                memiliki kemampuan problem solving yang baik, dan cepat
+                beradaptasi dengan teknologi serta lingkungan kerja baru.
               </p>
 
               <!-- Soft-Skill and Hard-Skill -->
@@ -353,9 +435,13 @@
                   <div class="skill-grid">
                     <span class="skill-tag">Leadership</span>
                     <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag" data-i18n="skill_english">Speaking English</span>
+                    <span class="skill-tag" data-i18n="skill_english"
+                      >Speaking English</span
+                    >
                     <span class="skill-tag">Time Management</span>
-                    <span class="skill-tag" data-i18n="skill_team">Team Work</span>
+                    <span class="skill-tag" data-i18n="skill_team"
+                      >Team Work</span
+                    >
                     <span class="skill-tag">Communication</span>
                   </div>
                 </div>
@@ -410,7 +496,9 @@
           <p class="section-eyebrow mono" data-i18n="cv_eyebrow">CV / Resume</p>
           <h1 data-i18n="cv_title">My CV</h1>
           <div class="section-divider"></div>
-          <p data-i18n="cv_sub">Professional background, skills and experience.</p>
+          <p data-i18n="cv_sub">
+            Professional background, skills and experience.
+          </p>
         </div>
         <!-- End Section Title -->
 
@@ -440,7 +528,9 @@
                 <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
                 Mochammad-Dicky-Hanun-Prasetyo-CV.pdf
               </span>
-              <span class="doc-badge mono" data-i18n="cv_badge">PDF Document</span>
+              <span class="doc-badge mono" data-i18n="cv_badge"
+                >PDF Document</span
+              >
             </div>
             <div class="doc-panel-body">
               <iframe
@@ -468,10 +558,14 @@
       <section id="portfolio" class="portfolio section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <p class="section-eyebrow mono" data-i18n="pr_eyebrow">Projects / Work</p>
+          <p class="section-eyebrow mono" data-i18n="pr_eyebrow">
+            Projects / Work
+          </p>
           <h1 data-i18n="pr_title">Portfolio & Projects</h1>
           <div class="section-divider"></div>
-          <p data-i18n="pr_sub">Selected applications and systems I have built.</p>
+          <p data-i18n="pr_sub">
+            Selected applications and systems I have built.
+          </p>
         </div>
         <!-- End Section Title -->
 
@@ -487,7 +581,9 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <li data-filter="*" class="filter-active" data-i18n="filter_all">All</li>
+              <li data-filter="*" class="filter-active" data-i18n="filter_all">
+                All
+              </li>
               <li data-filter=".filter-akademik">Akademik</li>
               <li data-filter=".filter-non_akademik">Non Akademik</li>
             </ul>
@@ -524,12 +620,18 @@
                   <div class="project-body">
                     <div class="project-meta">
                       <span class="project-index mono">PROJECT_01</span>
-                      <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                      <span
+                        class="project-badge mono"
+                        data-i18n="badge_academic"
+                        >Academic</span
+                      >
                     </div>
                     <h4 class="project-title" data-i18n="p1_title">
                       Web Survey Kepuasan Pelanggan Polinema
                     </h4>
-                    <span class="project-role" data-i18n="p1_role">Back-End Developer</span>
+                    <span class="project-role" data-i18n="p1_role"
+                      >Back-End Developer</span
+                    >
                     <p class="project-desc" data-i18n="p1_desc">
                       Project Website Sistem Informasi Survey Kepuasan Pelanggan
                       Polinema — HTML, PHP native, JavaScript, MySQL, Figma.
@@ -546,7 +648,11 @@
                     <div class="project-actions">
                       <a
                         class="btn btn-ghost-modern sm"
-                        onclick="showAlert('File tidak disimpan pada repository GitHub')"
+                        onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "
                         ><i class="bi bi-github"></i> GitHub</a
                       >
                       <a
@@ -598,10 +704,18 @@
                   <div class="project-body">
                     <div class="project-meta">
                       <span class="project-index mono">PROJECT_02</span>
-                      <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                      <span
+                        class="project-badge mono"
+                        data-i18n="badge_academic"
+                        >Academic</span
+                      >
                     </div>
-                    <h4 class="project-title" data-i18n="p2_title">Web Point of Sales (POS)</h4>
-                    <span class="project-role" data-i18n="p2_role">Front-End & Back-End Developer</span>
+                    <h4 class="project-title" data-i18n="p2_title">
+                      Web Point of Sales (POS)
+                    </h4>
+                    <span class="project-role" data-i18n="p2_role"
+                      >Front-End & Back-End Developer</span
+                    >
                     <p class="project-desc" data-i18n="p2_desc">
                       Project Website Point of Sales (POS) — Figma UI, PHP
                       Laravel 10.3, MySQL.
@@ -623,7 +737,9 @@
                       >
                       <a
                         class="btn btn-ghost-modern sm"
-                        onclick="showAlert('Tampilan UI tidak disimpan pada Figma')"
+                        onclick="
+                          showAlert('Tampilan UI tidak disimpan pada Figma')
+                        "
                         ><i class="bi bi-figma"></i> Figma</a
                       >
                       <button
@@ -668,10 +784,18 @@
                   <div class="project-body">
                     <div class="project-meta">
                       <span class="project-index mono">PROJECT_03</span>
-                      <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                      <span
+                        class="project-badge mono"
+                        data-i18n="badge_academic"
+                        >Academic</span
+                      >
                     </div>
-                    <h4 class="project-title" data-i18n="p3_title">Web Sistem Kompensasi JTI</h4>
-                    <span class="project-role" data-i18n="p3_role">API Back-End Developer</span>
+                    <h4 class="project-title" data-i18n="p3_title">
+                      Web Sistem Kompensasi JTI
+                    </h4>
+                    <span class="project-role" data-i18n="p3_role"
+                      >API Back-End Developer</span
+                    >
                     <p class="project-desc" data-i18n="p3_desc">
                       Project Website Sistem Kompensasi JTI Polinema — Figma UI,
                       PHP Laravel 10.3, MySQL.
@@ -740,12 +864,18 @@
                   <div class="project-body">
                     <div class="project-meta">
                       <span class="project-index mono">PROJECT_04</span>
-                      <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                      <span
+                        class="project-badge mono"
+                        data-i18n="badge_academic"
+                        >Academic</span
+                      >
                     </div>
                     <h4 class="project-title" data-i18n="p4_title">
                       Aplikasi Mobile E-Kompen (Sikomti_app)
                     </h4>
-                    <span class="project-role" data-i18n="p4_role">Front-End & Back-End Developer</span>
+                    <span class="project-role" data-i18n="p4_role"
+                      >Front-End & Back-End Developer</span
+                    >
                     <p class="project-desc" data-i18n="p4_desc">
                       Aplikasi Mobile E-Kompen menggunakan Flutter Dart dengan
                       API dari website Sistem Kompen JTI.
@@ -815,12 +945,18 @@
                   <div class="project-body">
                     <div class="project-meta">
                       <span class="project-index mono">PROJECT_05</span>
-                      <span class="project-badge mono" data-i18n="badge_nonacademic">Non Academic</span>
+                      <span
+                        class="project-badge mono"
+                        data-i18n="badge_nonacademic"
+                        >Non Academic</span
+                      >
                     </div>
                     <h4 class="project-title" data-i18n="p5_title">
                       Chatbot RAG Universitas Negeri Malang
                     </h4>
-                    <span class="project-role" data-i18n="p5_role">AI Engineer & Full-Stack Developer</span>
+                    <span class="project-role" data-i18n="p5_role"
+                      >AI Engineer & Full-Stack Developer</span
+                    >
                     <p class="project-desc" data-i18n="p5_desc">
                       Chatbot berbasis Retrieval-Augmented Generation (RAG)
                       untuk informasi akademik menggunakan LLM, Vector Database,
@@ -837,12 +973,20 @@
                     <div class="project-actions">
                       <a
                         class="btn btn-ghost-modern sm"
-                        onclick="showAlert('File tidak disimpan pada repository GitHub')"
+                        onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "
                         ><i class="bi bi-github"></i> GitHub</a
                       >
                       <a
                         class="btn btn-ghost-modern sm"
-                        onclick="showAlert('File tidak disimpan pada repository GitHub')"
+                        onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "
                         ><i class="bi bi-figma"></i> Figma</a
                       >
                       <button
@@ -887,10 +1031,18 @@
                   <div class="project-body">
                     <div class="project-meta">
                       <span class="project-index mono">PROJECT_06</span>
-                      <span class="project-badge mono" data-i18n="badge_nonacademic">Non Academic</span>
+                      <span
+                        class="project-badge mono"
+                        data-i18n="badge_nonacademic"
+                        >Non Academic</span
+                      >
                     </div>
-                    <h4 class="project-title" data-i18n="p6_title">Chatbot RAG UPDL PLN</h4>
-                    <span class="project-role" data-i18n="p6_role">Project Manager & Full-Stack Developer</span>
+                    <h4 class="project-title" data-i18n="p6_title">
+                      Chatbot RAG UPDL PLN
+                    </h4>
+                    <span class="project-role" data-i18n="p6_role"
+                      >Project Manager & Full-Stack Developer</span
+                    >
                     <p class="project-desc" data-i18n="p6_desc">
                       Chatbot berbasis RAG untuk pencarian informasi dokumen
                       pelatihan UPDL PLN menggunakan LLM, Embedding Model, dan
@@ -908,12 +1060,20 @@
                     <div class="project-actions">
                       <a
                         class="btn btn-ghost-modern sm"
-                        onclick="showAlert('File tidak disimpan pada repository GitHub')"
+                        onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "
                         ><i class="bi bi-github"></i> GitHub</a
                       >
                       <a
                         class="btn btn-ghost-modern sm"
-                        onclick="showAlert('File tidak disimpan pada repository GitHub')"
+                        onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "
                         ><i class="bi bi-figma"></i> Figma</a
                       >
                       <button
@@ -949,7 +1109,9 @@
                     <div class="project-meta justify-content-center">
                       <span class="project-index mono">PROJECT_NEXT</span>
                     </div>
-                    <h4 class="project-title" data-i18n="coming_soon">Coming Soon...</h4>
+                    <h4 class="project-title" data-i18n="coming_soon">
+                      Coming Soon...
+                    </h4>
                     <p class="project-desc" data-i18n="coming_desc">
                       More exciting projects on the way!
                     </p>
@@ -968,7 +1130,9 @@
       <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <p class="section-eyebrow mono" data-i18n="ct_eyebrow">Contact / Connect</p>
+          <p class="section-eyebrow mono" data-i18n="ct_eyebrow">
+            Contact / Connect
+          </p>
           <h1 data-i18n="ct_title">Let's Build Projects Together.</h1>
           <div class="section-divider"></div>
           <p data-i18n="ct_sub">
@@ -989,7 +1153,9 @@
               >
                 <span class="contact-icon"><i class="bi bi-geo-alt"></i></span>
                 <span>
-                  <span class="contact-label mono" data-i18n="ct_location">Location</span>
+                  <span class="contact-label mono" data-i18n="ct_location"
+                    >Location</span
+                  >
                   <span class="contact-value" data-i18n="ct_location_val"
                     >Malang, East Java, Indonesia</span
                   >
@@ -999,9 +1165,13 @@
 
             <div class="col-lg-4 col-md-6">
               <a class="contact-card">
-                <span class="contact-icon"><i class="bi bi-telephone"></i></span>
+                <span class="contact-icon"
+                  ><i class="bi bi-telephone"></i
+                ></span>
                 <span>
-                  <span class="contact-label mono" data-i18n="ct_phone">Phone</span>
+                  <span class="contact-label mono" data-i18n="ct_phone"
+                    >Phone</span
+                  >
                   <span class="contact-value">+62 822 6419 0073</span>
                 </span>
               </a>
@@ -1014,8 +1184,12 @@
               >
                 <span class="contact-icon"><i class="bi bi-envelope"></i></span>
                 <span>
-                  <span class="contact-label mono" data-i18n="ct_email">Email</span>
-                  <span class="contact-value">dickyhanunprasetyo@gmail.com</span>
+                  <span class="contact-label mono" data-i18n="ct_email"
+                    >Email</span
+                  >
+                  <span class="contact-value"
+                    >dickyhanunprasetyo@gmail.com</span
+                  >
                 </span>
               </a>
             </div>
@@ -1027,12 +1201,17 @@
 
     <footer id="footer" class="footer">
       <div class="container">
-        <span class="footer-logo">DICKY<span class="logo-accent">.</span>PRAS</span>
+        <span class="footer-logo"
+          >DICKY<span class="logo-accent">.</span>PRAS</span
+        >
         <p class="footer-tagline" data-i18n="ft_tagline">
           Full Stack Developer — Building practical software solutions.
         </p>
         <div class="social-links d-flex justify-content-center">
-          <a href="https://github.com/dickyhanunprasetyo" aria-label="GitHub" title="GitHub"
+          <a
+            href="https://github.com/dickyhanunprasetyo"
+            aria-label="GitHub"
+            title="GitHub"
             ><i class="bi bi-github"></i
           ></a>
           <a
@@ -1041,10 +1220,16 @@
             title="LinkedIn"
             ><i class="bi bi-linkedin"></i
           ></a>
-          <a href="https://instagram.com/dickymdhp" aria-label="Instagram" title="Instagram"
+          <a
+            href="https://instagram.com/dickymdhp"
+            aria-label="Instagram"
+            title="Instagram"
             ><i class="bi bi-instagram"></i
           ></a>
-          <a href="https://www.youtube.com/@pras_dicky" aria-label="YouTube" title="YouTube"
+          <a
+            href="https://www.youtube.com/@pras_dicky"
+            aria-label="YouTube"
+            title="YouTube"
             ><i class="bi bi-youtube"></i
           ></a>
           <a
@@ -1128,28 +1313,70 @@
     <!-- Splash Screen -->
     <div id="splash-screen" aria-hidden="true">
       <div class="splash-grid" aria-hidden="true"></div>
-      <div class="splash-particles" id="splash-particles" aria-hidden="true"></div>
+      <div
+        class="splash-particles"
+        id="splash-particles"
+        aria-hidden="true"
+      ></div>
       <div class="splash-content">
         <!-- Hexagon Logo Mark -->
         <div class="splash-logo">
-          <svg class="splash-hex" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="splash-hex"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <!-- Outer hex ring -->
-            <polygon points="60,8 108,36 108,84 60,112 12,84 12,36"
-              class="hex-ring" fill="none" stroke="url(#hexGradOuter)" stroke-width="2.5"
-              stroke-dasharray="380" stroke-dashoffset="380" />
+            <polygon
+              points="60,8 108,36 108,84 60,112 12,84 12,36"
+              class="hex-ring"
+              fill="none"
+              stroke="url(#hexGradOuter)"
+              stroke-width="2.5"
+              stroke-dasharray="380"
+              stroke-dashoffset="380"
+            />
             <!-- Inner hex ring -->
-            <polygon points="60,24 92,42 92,78 60,96 28,78 28,42"
-              class="hex-ring-inner" fill="none" stroke="url(#hexGradInner)" stroke-width="2"
-              stroke-dasharray="280" stroke-dashoffset="280" />
+            <polygon
+              points="60,24 92,42 92,78 60,96 28,78 28,42"
+              class="hex-ring-inner"
+              fill="none"
+              stroke="url(#hexGradInner)"
+              stroke-width="2"
+              stroke-dasharray="280"
+              stroke-dashoffset="280"
+            />
             <!-- Center text -->
-            <text x="60" y="68" text-anchor="middle" class="hex-text" fill="url(#hexGradInner)"
-              font-family="'JetBrains Mono', monospace" font-size="24" font-weight="500">MDHP</text>
+            <text
+              x="60"
+              y="68"
+              text-anchor="middle"
+              class="hex-text"
+              fill="url(#hexGradInner)"
+              font-family="'JetBrains Mono', monospace"
+              font-size="24"
+              font-weight="500"
+            >
+              MDHP
+            </text>
             <defs>
-              <linearGradient id="hexGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient
+                id="hexGradOuter"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
                 <stop offset="0%" stop-color="#7c5cfc" />
                 <stop offset="100%" stop-color="#22d3ee" />
               </linearGradient>
-              <linearGradient id="hexGradInner" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient
+                id="hexGradInner"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
                 <stop offset="0%" stop-color="#22d3ee" />
                 <stop offset="100%" stop-color="#7c5cfc" />
               </linearGradient>
@@ -1162,7 +1389,11 @@
         </div>
 
         <!-- Title -->
-        <h1 class="splash-title" id="splash-title" data-splash-name="Dicky Prasetyo"></h1>
+        <h1
+          class="splash-title"
+          id="splash-title"
+          data-splash-name="Dicky Prasetyo"
+        ></h1>
         <div class="splash-divider"><span></span></div>
         <p class="splash-subtitle">
           <span class="splash-sub-slash">&#47;&#47;</span> Full Stack Developer
@@ -1185,7 +1416,7 @@
     </div>
 
     <!-- Preloader (legacy fallback) -->
-    <div id="preloader" style="display:none"></div>
+    <div id="preloader" style="display: none"></div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1195,7 +1426,7 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/main.js?v=10"></script>
+    <script src="assets/js/main.js?v=16"></script>
 
     <!-- Global Alert Function -->
     <script>
@@ -1203,6 +1434,5 @@
         alert(message || "File tidak disimpan pada repository GitHub");
       }
     </script>
-
   </body>
 </html>

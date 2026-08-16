@@ -713,7 +713,9 @@
       devcard_title: "Developer Profile",
       devcard_role: "Role",
       devcard_focus: "Focus",
-      devcard_focus_val: "Web Development · Backend Systems · AI Integration",
+      devcard_focus_1: "Project Manager",
+      devcard_focus_2: "Fullstack Web Developer",
+      devcard_focus_3: "AI Chatbot Developer",
       devcard_stack: "Stack",
       devcard_location: "Location",
       devcard_location_val: "Malang, Indonesia",
@@ -803,7 +805,9 @@
       devcard_title: "Profil Developer",
       devcard_role: "Peran",
       devcard_focus: "Fokus",
-      devcard_focus_val: "Pengembangan Web · Sistem Backend · Integrasi AI",
+      devcard_focus_1: "Project Manager",
+      devcard_focus_2: "Fullstack Web Developer",
+      devcard_focus_3: "AI Chatbot Developer",
       devcard_stack: "Stack",
       devcard_location: "Lokasi",
       devcard_location_val: "Malang, Indonesia",
@@ -903,6 +907,7 @@
       const val = I18N[lang] && I18N[lang][key];
       if (val !== undefined) el.textContent = val;
     });
+    if (typeof refreshFocusRotator === "function") refreshFocusRotator();
     const isId = lang === "id";
     const nextLabel = isId ? "EN" : "ID";
     const nextTip = isId ? "Switch to English" : "Ganti ke Bahasa Indonesia";
@@ -920,6 +925,61 @@
   document
     .querySelectorAll(".lang-toggle")
     .forEach((btn) => btn.addEventListener("click", toggleLang));
+
+  /**
+   * Focus rotator (dev card) — cycles 01 Project Manager →
+   * 02 Fullstack Web Developer → 03 AI Chatbot Developer with a slide
+   * animation. The hero role stays static (Project Manager only).
+   */
+  const focusRotator = document.getElementById("focusRotator");
+  const FOCUS_ITEMS = [
+    { key: "devcard_focus_1" },
+    { key: "devcard_focus_2" },
+    { key: "devcard_focus_3" },
+  ];
+  let focusIndex = 0;
+  let focusTimer = null;
+
+  function refreshFocusRotator() {
+    if (!focusRotator) return;
+    const item = FOCUS_ITEMS[focusIndex];
+    const textEl = focusRotator.querySelector(".dev-focus-text");
+    if (textEl) {
+      const val = I18N[currentLang] && I18N[currentLang][item.key];
+      if (val !== undefined) textEl.textContent = val;
+    }
+    focusRotator.querySelectorAll(".focus-dot").forEach((dot, i) => {
+      dot.classList.toggle("active", i === focusIndex);
+    });
+  }
+
+  function animateFocusSlide() {
+    if (!focusRotator) return;
+    const slide = focusRotator.querySelector(".dev-focus-slide");
+    if (!slide) return;
+    slide.classList.remove("is-swapping");
+    void slide.offsetWidth; // restart animation
+    slide.classList.add("is-swapping");
+  }
+
+  if (focusRotator) {
+    refreshFocusRotator();
+    if (!reducedMotion) {
+      const nextFocus = () => {
+        focusIndex = (focusIndex + 1) % FOCUS_ITEMS.length;
+        refreshFocusRotator();
+        animateFocusSlide();
+      };
+      focusTimer = setInterval(nextFocus, 3200);
+      focusRotator.addEventListener("mouseenter", () => {
+        clearInterval(focusTimer);
+      });
+      focusRotator.addEventListener("mouseleave", () => {
+        clearInterval(focusTimer);
+        focusTimer = setInterval(nextFocus, 3200);
+      });
+    }
+  }
 
   // Init language (stored → default Indonesian)
   applyLang(getStoredLang() === "en" || getStoredLang() === "id" ? getStoredLang() : "id");
