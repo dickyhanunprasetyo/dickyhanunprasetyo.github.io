@@ -730,7 +730,7 @@
       about_title: "About Me",
       about_sub: "Get to know more about me",
       about_bio:
-        "I hold a Bachelor of Applied Business Information Systems degree from Politeknik Negeri Malang, Department of Information Technology. Experienced in Project Management, full-stack web development, and AI chatbot development. Accustomed to designing and building applications from frontend to backend, managing databases, and integrating AI technologies to create interactive and adaptive chatbots. Experienced in leading and managing projects, coordinating teams, preparing work plans, and ensuring projects meet their goals and targets. Able to work independently and in teams, with strong problem-solving skills, and quick to adapt to new technologies and work environments.",
+        "I hold a Bachelor of Applied Business Information Systems degree from Politeknik Negeri Malang, Department of Information Technology. Experienced in Project Manager, full-stack web development, and AI chatbot development. Accustomed to designing and building applications from frontend to backend, managing databases, and integrating AI technologies to create interactive and adaptive chatbots. Experienced in leading and managing projects, coordinating teams, preparing work plans, and ensuring projects meet their goals and targets. Able to work independently and in teams, with strong problem-solving skills, and quick to adapt to new technologies and work environments.",
       soft_title: "Soft Skills",
       tech_title: "Tech Stack",
       skill_english: "Speaking English",
@@ -822,7 +822,7 @@
       about_title: "Tentang Saya",
       about_sub: "Kenali saya lebih dekat",
       about_bio:
-        "Saya merupakan lulusan Sarjana Terapan Sistem Informasi Bisnis dari Politeknik Negeri Malang, Jurusan Teknologi Informasi. Memiliki pengalaman dalam Project Management, pengembangan aplikasi web secara fullstack, serta pengembangan AI chatbot. Terbiasa merancang dan mengembangkan aplikasi dari sisi frontend hingga backend, mengelola database, serta mengintegrasikan teknologi AI untuk membangun chatbot yang interaktif dan adaptif. Memiliki pengalaman dalam memimpin dan mengelola proyek, mengoordinasikan tim, menyusun perencanaan kerja, serta memastikan proyek berjalan sesuai tujuan dan target yang ditetapkan. Mampu bekerja secara mandiri maupun dalam tim, memiliki kemampuan problem solving yang baik, dan cepat beradaptasi dengan teknologi serta lingkungan kerja baru.",
+        "Saya merupakan lulusan Sarjana Terapan Sistem Informasi Bisnis dari Politeknik Negeri Malang, Jurusan Teknologi Informasi. Memiliki pengalaman dalam Project Manager, pengembangan aplikasi web secara fullstack, serta pengembangan AI chatbot. Terbiasa merancang dan mengembangkan aplikasi dari sisi frontend hingga backend, mengelola database, serta mengintegrasikan teknologi AI untuk membangun chatbot yang interaktif dan adaptif. Memiliki pengalaman dalam memimpin dan mengelola proyek, mengoordinasikan tim, menyusun perencanaan kerja, serta memastikan proyek berjalan sesuai tujuan dan target yang ditetapkan. Mampu bekerja secara mandiri maupun dalam tim, memiliki kemampuan problem solving yang baik, dan cepat beradaptasi dengan teknologi serta lingkungan kerja baru.",
       soft_title: "Soft Skills",
       tech_title: "Tech Stack",
       skill_english: "Berbahasa Inggris",
