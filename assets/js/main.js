@@ -705,6 +705,7 @@
       nav_projects: "Projects",
       nav_contact: "Contact",
       hero_status: "Available for opportunities",
+      hero_role: "Full Stack Web Developer",
       hero_desc:
         "Building scalable web applications from backend systems to responsive frontend experiences.",
       typed_label: "Currently working with",
@@ -787,7 +788,7 @@
       ct_location_val: "Malang, East Java, Indonesia",
       ct_phone: "Phone",
       ct_email: "Email",
-      ft_tagline: "Full Stack Developer — Building practical software solutions.",
+      ft_tagline: "Full Stack Web Developer — Building practical software solutions.",
       modal_role: "Role",
     },
     id: {
@@ -797,6 +798,7 @@
       nav_projects: "Proyek",
       nav_contact: "Kontak",
       hero_status: "Terbuka untuk peluang",
+      hero_role: "Full Stack Web Developer",
       hero_desc:
         "Membangun aplikasi web yang skalabel, dari sistem backend hingga pengalaman frontend yang responsif.",
       typed_label: "Saat ini bekerja dengan",
@@ -881,7 +883,7 @@
       ct_phone: "Telepon",
       ct_email: "Email",
       ft_tagline:
-        "Full Stack Developer — Membangun solusi perangkat lunak yang praktis.",
+        "Full Stack Web Developer — Membangun solusi perangkat lunak yang praktis.",
       modal_role: "Peran",
     },
   };
@@ -929,7 +931,7 @@
   /**
    * Focus rotator (dev card) — cycles 01 Project Manager →
    * 02 Fullstack Web Developer → 03 AI Chatbot Developer with a slide
-   * animation. The hero role stays static (Project Manager only).
+   * animation. The hero role stays static (Full Stack Web Developer).
    */
   const focusRotator = document.getElementById("focusRotator");
   const FOCUS_ITEMS = [

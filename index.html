@@ -1,1438 +1,937 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Mochammad Dicky Hanun Prasetyo | Portfolio</title>
-    <meta
-      name="description"
-      content="Portofolio profesional Mochammad Dicky Hanun Prasetyo - Full-Stack Developer specializing in Laravel, ReactJS, and modern web technologies."
-    />
-    <meta
-      name="keywords"
-      content="MDHP, Portfolio, Web Developer, Laravel, ReactJS, Full-Stack Developer, Indonesia"
-    />
-    <meta name="author" content="Mochammad Dicky Hanun Prasetyo" />
 
-    <!-- Open Graph / Social Media -->
-    <meta
-      property="og:title"
-      content="Mochammad Dicky Hanun Prasetyo | Portfolio"
-    />
-    <meta
-      property="og:description"
-      content="Full-Stack Developer specializing in Laravel, ReactJS, and modern web technologies."
-    />
-    <meta property="og:image" content="assets/img/profile_me.jpg" />
-    <meta property="og:url" content="https://dickyhanunprasetyo.github.io" />
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Mochammad Dicky Hanun Prasetyo | Portfolio</title>
+  <meta name="description"
+    content="Portofolio profesional Mochammad Dicky Hanun Prasetyo - Full-Stack Developer specializing in Laravel, ReactJS, and modern web technologies." />
+  <meta name="keywords" content="MDHP, Portfolio, Web Developer, Laravel, ReactJS, Full-Stack Developer, Indonesia" />
+  <meta name="author" content="Mochammad Dicky Hanun Prasetyo" />
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.svg" />
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Mochammad Dicky Hanun Prasetyo | Portfolio" />
+  <meta property="og:description"
+    content="Full-Stack Developer specializing in Laravel, ReactJS, and modern web technologies." />
+  <meta property="og:image" content="assets/img/profile_me.jpg" />
+  <meta property="og:url" content="https://dickyhanunprasetyo.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.svg" />
 
-    <!-- Prevent theme flash: apply saved/system theme before first paint -->
-    <script>
-      (function () {
-        try {
-          var stored = localStorage.getItem("mdhp-portfolio-theme");
-          var theme =
-            stored === "light" || stored === "dark"
-              ? stored
-              : window.matchMedia &&
-                  window.matchMedia("(prefers-color-scheme: light)").matches
-                ? "light"
-                : "dark";
-          document.documentElement.setAttribute("data-theme", theme);
-          document.documentElement.setAttribute("data-bs-theme", theme);
-          var storedLang = localStorage.getItem("mdhp-portfolio-lang");
-          document.documentElement.lang =
-            storedLang === "en" || storedLang === "id" ? storedLang : "id";
-        } catch (e) {
-          document.documentElement.setAttribute("data-theme", "dark");
-          document.documentElement.setAttribute("data-bs-theme", "dark");
-        }
-      })();
-    </script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
+  <!-- Prevent theme flash: apply saved/system theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("mdhp-portfolio-theme");
+        var theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia &&
+              window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.setAttribute("data-bs-theme", theme);
+        var storedLang = localStorage.getItem("mdhp-portfolio-lang");
+        document.documentElement.lang =
+          storedLang === "en" || storedLang === "id" ? storedLang : "id";
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+      }
+    })();
+  </script>
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css?v=15" rel="stylesheet" />
-  </head>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
 
-  <body class="index-page">
-    <!-- Background particle field (theme-aware) -->
-    <canvas id="bg-particles" aria-hidden="true"></canvas>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css?v=15" rel="stylesheet" />
+</head>
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div
-        class="container-fluid container-xl d-flex align-items-center justify-content-between"
-      >
-        <a
-          href="index.html"
-          class="logo d-flex align-items-center"
-          aria-label="Back to top"
-        >
-          <span class="logo-mark" aria-hidden="true">
-            <svg
-              class="logo-svg"
-              viewBox="0 0 40 40"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <!-- Tech bracket frame -->
-              <path
-                d="M12 8L6 20L12 32"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M28 8L34 20L28 32"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <!-- Center slash -->
-              <line
-                x1="22"
-                y1="10"
-                x2="16"
-                y2="30"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                opacity="0.7"
-              />
-            </svg>
-          </span>
-          <h1 class="sitename">DICKY<span class="logo-accent">.</span>PRAS</h1>
-        </a>
+<body class="index-page">
+  <!-- Background particle field (theme-aware) -->
+  <canvas id="bg-particles" aria-hidden="true"></canvas>
 
-        <nav id="navmenu" class="navmenu" aria-label="Main navigation">
-          <ul>
-            <li>
-              <a href="#hero" class="active" data-i18n="nav_home">Home</a>
-            </li>
-            <li><a href="#about" data-i18n="nav_about">About</a></li>
-            <li><a href="#CV" data-i18n="nav_cv">CV</a></li>
-            <li><a href="#portfolio" data-i18n="nav_projects">Projects</a></li>
-            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-          </ul>
-          <button
-            id="themeToggleMobile"
-            class="theme-toggle d-xl-none"
-            type="button"
-            aria-label="Toggle theme"
-          >
-            <i class="toggle-icon icon-sun bi bi-sun-fill"></i>
-            <i class="toggle-icon icon-moon bi bi-moon-fill"></i>
-          </button>
-          <button
-            id="langToggleMobile"
-            class="lang-toggle d-xl-none"
-            type="button"
-            aria-label="Switch to English"
-            title="Switch to English"
-          >
-            EN
-          </button>
-          <i
-            class="mobile-nav-toggle d-xl-none bi bi-list"
-            role="button"
-            tabindex="0"
-            aria-label="Open menu"
-          ></i>
-        </nav>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center" aria-label="Back to top">
+        <span class="logo-mark" aria-hidden="true">
+          <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tech bracket frame -->
+            <path d="M12 8L6 20L12 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M28 8L34 20L28 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <!-- Center slash -->
+            <line x1="22" y1="10" x2="16" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              opacity="0.7" />
+          </svg>
+        </span>
+        <h1 class="sitename">DICKY<span class="logo-accent">.</span>PRAS</h1>
+      </a>
 
-        <button
-          id="themeToggleDesktop"
-          class="theme-toggle d-none d-xl-inline-flex"
-          type="button"
-          aria-label="Toggle theme"
-        >
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
+        <ul>
+          <li>
+            <a href="#hero" class="active" data-i18n="nav_home">Home</a>
+          </li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#CV" data-i18n="nav_cv">CV</a></li>
+          <li><a href="#portfolio" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <button id="themeToggleMobile" class="theme-toggle d-xl-none" type="button" aria-label="Toggle theme">
           <i class="toggle-icon icon-sun bi bi-sun-fill"></i>
           <i class="toggle-icon icon-moon bi bi-moon-fill"></i>
         </button>
-
-        <button
-          id="langToggleDesktop"
-          class="lang-toggle d-none d-xl-inline-flex"
-          type="button"
-          aria-label="Switch to English"
-          title="Switch to English"
-        >
+        <button id="langToggleMobile" class="lang-toggle d-xl-none" type="button" aria-label="Switch to English"
+          title="Switch to English">
           EN
         </button>
-      </div>
-    </header>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Open menu"></i>
+      </nav>
 
-    <main class="main">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section">
-        <div class="hero-bg" aria-hidden="true"></div>
+      <button id="themeToggleDesktop" class="theme-toggle d-none d-xl-inline-flex" type="button"
+        aria-label="Toggle theme">
+        <i class="toggle-icon icon-sun bi bi-sun-fill"></i>
+        <i class="toggle-icon icon-moon bi bi-moon-fill"></i>
+      </button>
 
-        <div class="container">
-          <div class="row hero-grid align-items-center g-5">
-            <div class="col-lg-7" data-aos="fade-up">
-              <p class="hero-status">
-                <span class="status-dot" aria-hidden="true"></span>
-                <span data-i18n="hero_status">Available for opportunities</span>
-              </p>
-              <h2 class="hero-title">
-                <span
-                  id="animated-name"
-                  data-name="Mochammad Dicky Hanun Prasetyo"
-                  >Mochammad Dicky Hanun Prasetyo</span
-                >
-              </h2>
-              <p class="hero-role">
-                <span data-i18n="devcard_focus_1">Project Manager</span>
-              </p>
-              <p class="hero-desc" data-i18n="hero_desc">
-                Building scalable web applications from backend systems to
-                responsive frontend experiences.
-              </p>
-              <p class="hero-typed-line">
-                <span class="typed-label mono" data-i18n="typed_label"
-                  >Currently working with</span
-                >
-                <span
-                  class="typed"
-                  data-typed-items="ReactJS, Laravel, Python, MySQL, REST API, AI Integration"
-                ></span>
-              </p>
-              <div class="hero-cta">
-                <a
-                  href="#portfolio"
-                  class="btn-primary-modern"
-                  data-i18n="hero_cta_projects"
-                  >View Projects</a
-                >
-                <a
-                  href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf"
-                  download
-                  class="btn-ghost-modern"
-                  ><i class="bi bi-download"></i> Download CV</a
-                >
-              </div>
-              <div class="hero-social">
-                <span class="social-caption mono" data-i18n="hero_social"
-                  >Find me on</span
-                >
-                <div class="social-links">
-                  <a
-                    href="https://github.com/dickyhanunprasetyo"
-                    aria-label="GitHub"
-                    title="GitHub"
-                    ><i class="bi bi-github"></i
-                  ></a>
-                  <a
-                    href="https://linkedin.com/in/mochammad-dicky-hanun-prasetyo-a4575a2b7"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                    ><i class="bi bi-linkedin"></i
-                  ></a>
-                  <a
-                    href="https://instagram.com/mcdicky_mdhp"
-                    aria-label="Instagram"
-                    title="Instagram"
-                    ><i class="bi bi-instagram"></i
-                  ></a>
-                  <a
-                    href="https://www.youtube.com/@mdicky_mdhp6560"
-                    aria-label="YouTube"
-                    title="YouTube"
-                    ><i class="bi bi-youtube"></i
-                  ></a>
-                  <a
-                    href="https://www.facebook.com/share/15NgfuHaR8/?mibextid=LQQJ4d"
-                    aria-label="Facebook"
-                    title="Facebook"
-                    ><i class="bi bi-facebook"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-              <div class="dev-card">
-                <div class="dev-card-header">
-                  <span class="dev-card-title mono" data-i18n="devcard_title"
-                    >Developer Profile</span
-                  >
-                  <span class="dev-card-id mono">PROFILE_01</span>
-                </div>
-                <div class="dev-card-body">
-                  <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_role"
-                      >Role</span
-                    >
-                    <span class="dev-value">Full Stack Developer</span>
-                  </div>
-                  <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_focus"
-                      >Focus</span
-                    >
-                    <div class="dev-focus-rotator" id="focusRotator">
-                      <div class="dev-focus-viewport">
-                        <div class="dev-focus-slide">
-                          <span
-                            class="dev-focus-text"
-                            data-i18n="devcard_focus_1"
-                            >Project Manager</span
-                          >
-                        </div>
-                      </div>
-                      <div class="dev-focus-dots" aria-hidden="true">
-                        <span class="focus-dot active"></span>
-                        <span class="focus-dot"></span>
-                        <span class="focus-dot"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_stack"
-                      >Stack</span
-                    >
-                    <span class="dev-value mono"
-                      >Laravel · React · Python · MySQL</span
-                    >
-                  </div>
-                  <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_location"
-                      >Location</span
-                    >
-                    <span class="dev-value" data-i18n="devcard_location_val"
-                      >Malang, Indonesia</span
-                    >
-                  </div>
-                  <div class="dev-row">
-                    <span class="dev-label mono" data-i18n="devcard_status"
-                      >Status</span
-                    >
-                    <span class="dev-value status-ok"
-                      ><span class="status-dot" aria-hidden="true"></span>
-                      <span data-i18n="devcard_available">Available</span></span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <button id="langToggleDesktop" class="lang-toggle d-none d-xl-inline-flex" type="button"
+        aria-label="Switch to English" title="Switch to English">
+        EN
+      </button>
+    </div>
+  </header>
 
-      <!-- Developer Stats -->
-      <div class="stats-strip">
-        <div class="container">
-          <div class="stats-bar" data-aos="fade-up" data-aos-delay="100">
-            <div class="stat-item">
-              <span class="stat-value mono" id="statProjects">00+</span>
-              <span class="stat-label mono" data-i18n="stat_projects"
-                >Projects</span
-              >
-            </div>
-            <div class="stat-item">
-              <span class="stat-value mono" id="statTech">00+</span>
-              <span class="stat-label mono" data-i18n="stat_tech"
-                >Tech Stack</span
-              >
-            </div>
-            <div class="stat-item">
-              <span class="stat-value mono">Full Stack</span>
-              <span class="stat-label mono" data-i18n="stat_focus">Focus</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value mono" data-i18n="stat_available"
-                >Available</span
-              >
-              <span class="stat-label mono" data-i18n="stat_status"
-                >Status</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg" aria-hidden="true"></div>
 
-      <!-- About Section -->
-      <section id="about" class="about section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <p class="section-eyebrow mono" data-i18n="about_eyebrow">
-            About / Profile
-          </p>
-          <h1 data-i18n="about_title">About Me</h1>
-          <div class="section-divider"></div>
-          <p data-i18n="about_sub">Get to know more about me</p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row g-5 align-items-start">
-            <div class="col-lg-4">
-              <div class="profile-frame">
-                <img
-                  src="assets/img/profile_me.jpg"
-                  class="img-fluid"
-                  alt="Mochammad Dicky Hanun Prasetyo"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <h3 class="about-name">Mochammad Dicky Hanun Prasetyo</h3>
-              <p class="about-bio" data-i18n="about_bio">
-                Saya merupakan lulusan Sarjana Terapan Sistem Informasi Bisnis
-                dari Politeknik Negeri Malang, Jurusan Teknologi Informasi.
-                Memiliki pengalaman dalam Project Manager, pengembangan
-                aplikasi web secara fullstack, serta pengembangan AI chatbot.
-                Terbiasa merancang dan mengembangkan aplikasi dari sisi frontend
-                hingga backend, mengelola database, serta mengintegrasikan
-                teknologi AI untuk membangun chatbot yang interaktif dan
-                adaptif. Memiliki pengalaman dalam memimpin dan mengelola
-                proyek, mengoordinasikan tim, menyusun perencanaan kerja, serta
-                memastikan proyek berjalan sesuai tujuan dan target yang
-                ditetapkan. Mampu bekerja secara mandiri maupun dalam tim,
-                memiliki kemampuan problem solving yang baik, dan cepat
-                beradaptasi dengan teknologi serta lingkungan kerja baru.
-              </p>
-
-              <!-- Soft-Skill and Hard-Skill -->
-              <div class="row g-4">
-                <!-- Soft-Skill -->
-                <div class="col-md-6">
-                  <h5 class="skill-heading">
-                    <i class="bi bi-people-fill"></i>
-                    <span data-i18n="soft_title">Soft Skills</span>
-                  </h5>
-                  <div class="skill-grid">
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag" data-i18n="skill_english"
-                      >Speaking English</span
-                    >
-                    <span class="skill-tag">Time Management</span>
-                    <span class="skill-tag" data-i18n="skill_team"
-                      >Team Work</span
-                    >
-                    <span class="skill-tag">Communication</span>
-                  </div>
-                </div>
-                <!-- Hard-Skill -->
-                <div class="col-md-6">
-                  <h5 class="skill-heading">
-                    <i class="bi bi-code-slash"></i>
-                    <span data-i18n="tech_title">Tech Stack</span>
-                  </h5>
-                  <div class="skill-grid">
-                    <span class="tech-chip chip-laravel" title="PHP Laravel"
-                      ><i class="bi bi-filetype-php"></i>PHP Laravel</span
-                    >
-                    <span class="tech-chip chip-react" title="ReactJS"
-                      ><i class="bi bi-filetype-jsx"></i>ReactJS</span
-                    >
-                    <span class="tech-chip chip-mysql" title="MySQL"
-                      ><i class="bi bi-database"></i>MySQL</span
-                    >
-                    <span class="tech-chip chip-postgres" title="PostgreSQL"
-                      ><i class="bi bi-database"></i>PostgreSQL</span
-                    >
-                    <span class="tech-chip chip-python" title="Python"
-                      ><i class="bi bi-filetype-py"></i>Python</span
-                    >
-                    <span class="tech-chip chip-flutter" title="Flutter"
-                      ><i class="bi bi-phone"></i>Flutter</span
-                    >
-                    <span class="tech-chip chip-filament" title="Filament"
-                      ><i class="bi bi-command"></i>Filament</span
-                    >
-                    <span class="tech-chip chip-api" title="REST API"
-                      ><i class="bi bi-plug"></i>REST API</span
-                    >
-                    <span
-                      class="tech-chip chip-looker"
-                      title="Google Looker Studio"
-                      ><i class="bi bi-bar-chart"></i>Google Looker Studio</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CV Display Section -->
-      <section id="CV" class="cv section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <p class="section-eyebrow mono" data-i18n="cv_eyebrow">CV / Resume</p>
-          <h1 data-i18n="cv_title">My CV</h1>
-          <div class="section-divider"></div>
-          <p data-i18n="cv_sub">
-            Professional background, skills and experience.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="cv-toolbar" data-aos="fade-up">
-            <a
-              href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf"
-              download
-              class="btn-primary-modern"
-            >
-              <i class="bi bi-download"></i> Download CV
-            </a>
-            <a
-              href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf"
-              target="_blank"
-              rel="noopener"
-              class="btn-ghost-modern"
-            >
-              <i class="bi bi-box-arrow-up-right"></i>
-              <span data-i18n="cv_open">Open Document</span>
-            </a>
-          </div>
-
-          <div class="doc-panel" data-aos="fade-up" data-aos-delay="100">
-            <div class="doc-panel-header">
-              <span class="doc-file">
-                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
-                Mochammad-Dicky-Hanun-Prasetyo-CV.pdf
-              </span>
-              <span class="doc-badge mono" data-i18n="cv_badge"
-                >PDF Document</span
-              >
-            </div>
-            <div class="doc-panel-body">
-              <iframe
-                src="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf"
-                title="CV Preview"
-                loading="lazy"
-              ></iframe>
-            </div>
-            <div class="doc-panel-footer d-lg-none">
-              <a
-                href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf"
-                target="_blank"
-                rel="noopener"
-                class="btn-primary-modern w-100"
-              >
-                <i class="bi bi-eye"></i>
-                <span data-i18n="cv_open_mobile">Open CV</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <p class="section-eyebrow mono" data-i18n="pr_eyebrow">
-            Projects / Work
-          </p>
-          <h1 data-i18n="pr_title">Portfolio & Projects</h1>
-          <div class="section-divider"></div>
-          <p data-i18n="pr_sub">
-            Selected applications and systems I have built.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active" data-i18n="filter_all">
-                All
-              </li>
-              <li data-filter=".filter-akademik">Akademik</li>
-              <li data-filter=".filter-non_akademik">Non Akademik</li>
-            </ul>
-            <!-- End Portfolio Filters -->
-
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <!-- Portfolio Item 1 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik"
-                data-project="01"
-                data-key="p1"
-                data-title="Web Survey Kepuasan Pelanggan Polinema"
-                data-category="Academic"
-                data-role="Back-End Developer"
-                data-desc="Project Website Sistem Informasi Survey Kepuasan Pelanggan Polinema — HTML, PHP native, JavaScript, MySQL, Figma."
-                data-stack="HTML, PHP, MySQL, JavaScript"
-                data-image="assets/img/portfolio/app-1.png"
-                data-github=""
-                data-figma="https://www.figma.com/proto/Nwwu6qJ7jW9CbJe2K2mVSy/Design-Sistem-Kepuasan-Pelanggan-Polinema?node-id=1167-1001&node-type=canvas&t=neAspA3o31SPzTKE-1&scaling=min-zoom&content-scaling=fixed&page-id=993%3A1290&starting-point-node-id=1167%3A1001"
-              >
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="assets/img/portfolio/app-1.png"
-                      class="img-fluid"
-                      alt="Web Survey Kepuasan Pelanggan Polinema"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span class="project-index mono">PROJECT_01</span>
-                      <span
-                        class="project-badge mono"
-                        data-i18n="badge_academic"
-                        >Academic</span
-                      >
-                    </div>
-                    <h4 class="project-title" data-i18n="p1_title">
-                      Web Survey Kepuasan Pelanggan Polinema
-                    </h4>
-                    <span class="project-role" data-i18n="p1_role"
-                      >Back-End Developer</span
-                    >
-                    <p class="project-desc" data-i18n="p1_desc">
-                      Project Website Sistem Informasi Survey Kepuasan Pelanggan
-                      Polinema — HTML, PHP native, JavaScript, MySQL, Figma.
-                    </p>
-                    <div class="project-stack">
-                      <span class="stack-label mono">Stack</span>
-                      <div class="stack-chips">
-                        <span class="chip">HTML</span>
-                        <span class="chip">PHP</span>
-                        <span class="chip">MySQL</span>
-                        <span class="chip">JavaScript</span>
-                      </div>
-                    </div>
-                    <div class="project-actions">
-                      <a
-                        class="btn btn-ghost-modern sm"
-                        onclick="
-                          showAlert(
-                            'File tidak disimpan pada repository GitHub',
-                          )
-                        "
-                        ><i class="bi bi-github"></i> GitHub</a
-                      >
-                      <a
-                        href="https://www.figma.com/proto/Nwwu6qJ7jW9CbJe2K2mVSy/Design-Sistem-Kepuasan-Pelanggan-Polinema?node-id=1167-1001&node-type=canvas&t=neAspA3o31SPzTKE-1&scaling=min-zoom&content-scaling=fixed&page-id=993%3A1290&starting-point-node-id=1167%3A1001"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn btn-ghost-modern sm"
-                        ><i class="bi bi-figma"></i> Figma</a
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-primary-modern sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        aria-label="View details for Web Survey Kepuasan Pelanggan Polinema"
-                      >
-                        <span data-i18n="btn_details">Details</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <!-- Portfolio Item 2 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik"
-                data-project="02"
-                data-key="p2"
-                data-title="Web Point of Sales (POS)"
-                data-category="Academic"
-                data-role="Front-End & Back-End Developer"
-                data-desc="Project Website Point of Sales (POS) — Figma UI, PHP Laravel 10.3, MySQL."
-                data-stack="PHP Laravel, MySQL"
-                data-image="assets/img/portfolio/app-2.png"
-                data-github="https://github.com/dickyhanunprasetyo/PWL_POS"
-                data-figma=""
-              >
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="assets/img/portfolio/app-2.png"
-                      class="img-fluid"
-                      alt="Web Point of Sales"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span class="project-index mono">PROJECT_02</span>
-                      <span
-                        class="project-badge mono"
-                        data-i18n="badge_academic"
-                        >Academic</span
-                      >
-                    </div>
-                    <h4 class="project-title" data-i18n="p2_title">
-                      Web Point of Sales (POS)
-                    </h4>
-                    <span class="project-role" data-i18n="p2_role"
-                      >Front-End & Back-End Developer</span
-                    >
-                    <p class="project-desc" data-i18n="p2_desc">
-                      Project Website Point of Sales (POS) — Figma UI, PHP
-                      Laravel 10.3, MySQL.
-                    </p>
-                    <div class="project-stack">
-                      <span class="stack-label mono">Stack</span>
-                      <div class="stack-chips">
-                        <span class="chip">PHP Laravel</span>
-                        <span class="chip">MySQL</span>
-                      </div>
-                    </div>
-                    <div class="project-actions">
-                      <a
-                        href="https://github.com/dickyhanunprasetyo/PWL_POS"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn btn-ghost-modern sm"
-                        ><i class="bi bi-github"></i> GitHub</a
-                      >
-                      <a
-                        class="btn btn-ghost-modern sm"
-                        onclick="
-                          showAlert('Tampilan UI tidak disimpan pada Figma')
-                        "
-                        ><i class="bi bi-figma"></i> Figma</a
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-primary-modern sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        aria-label="View details for Web Point of Sales"
-                      >
-                        <span data-i18n="btn_details">Details</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <!-- Portfolio Item 3 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik"
-                data-project="03"
-                data-key="p3"
-                data-title="Web Sistem Kompensasi JTI"
-                data-category="Academic"
-                data-role="API Back-End Developer"
-                data-desc="Project Website Sistem Kompensasi JTI Polinema — Figma UI, PHP Laravel 10.3, MySQL."
-                data-stack="PHP Laravel, MySQL"
-                data-image="assets/img/portfolio/app-3.png"
-                data-github="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech"
-                data-figma="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2591-891&t=MF9LlUPsji4yCNz5-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2591%3A891"
-              >
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="assets/img/portfolio/app-3.png"
-                      class="img-fluid"
-                      alt="Web Sistem Kompensasi JTI"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span class="project-index mono">PROJECT_03</span>
-                      <span
-                        class="project-badge mono"
-                        data-i18n="badge_academic"
-                        >Academic</span
-                      >
-                    </div>
-                    <h4 class="project-title" data-i18n="p3_title">
-                      Web Sistem Kompensasi JTI
-                    </h4>
-                    <span class="project-role" data-i18n="p3_role"
-                      >API Back-End Developer</span
-                    >
-                    <p class="project-desc" data-i18n="p3_desc">
-                      Project Website Sistem Kompensasi JTI Polinema — Figma UI,
-                      PHP Laravel 10.3, MySQL.
-                    </p>
-                    <div class="project-stack">
-                      <span class="stack-label mono">Stack</span>
-                      <div class="stack-chips">
-                        <span class="chip">PHP Laravel</span>
-                        <span class="chip">MySQL</span>
-                      </div>
-                    </div>
-                    <div class="project-actions">
-                      <a
-                        href="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn btn-ghost-modern sm"
-                        ><i class="bi bi-github"></i> GitHub</a
-                      >
-                      <a
-                        href="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2591-891&t=MF9LlUPsji4yCNz5-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2591%3A891"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn btn-ghost-modern sm"
-                        ><i class="bi bi-figma"></i> Figma</a
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-primary-modern sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        aria-label="View details for Web Sistem Kompensasi JTI"
-                      >
-                        <span data-i18n="btn_details">Details</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <!-- Portfolio Item 4 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik"
-                data-project="04"
-                data-key="p4"
-                data-title="Aplikasi Mobile E-Kompen (Sikomti_app)"
-                data-category="Academic"
-                data-role="Front-End & Back-End Developer"
-                data-desc="Aplikasi Mobile E-Kompen menggunakan Flutter Dart dengan API dari website Sistem Kompen JTI."
-                data-stack="Flutter, Dart, REST API"
-                data-image="assets/img/portfolio/app-4.png"
-                data-github="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech"
-                data-figma="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2377-4&p=f&t=MF9LlUPsji4yCNz5-0&scaling=scale-down&content-scaling=fixed&page-id=2314%3A2&starting-point-node-id=2377%3A4"
-              >
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="assets/img/portfolio/app-4.png"
-                      class="img-fluid"
-                      alt="Aplikasi Sistem Kompensasi JTI"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span class="project-index mono">PROJECT_04</span>
-                      <span
-                        class="project-badge mono"
-                        data-i18n="badge_academic"
-                        >Academic</span
-                      >
-                    </div>
-                    <h4 class="project-title" data-i18n="p4_title">
-                      Aplikasi Mobile E-Kompen (Sikomti_app)
-                    </h4>
-                    <span class="project-role" data-i18n="p4_role"
-                      >Front-End & Back-End Developer</span
-                    >
-                    <p class="project-desc" data-i18n="p4_desc">
-                      Aplikasi Mobile E-Kompen menggunakan Flutter Dart dengan
-                      API dari website Sistem Kompen JTI.
-                    </p>
-                    <div class="project-stack">
-                      <span class="stack-label mono">Stack</span>
-                      <div class="stack-chips">
-                        <span class="chip">Flutter</span>
-                        <span class="chip">Dart</span>
-                        <span class="chip">REST API</span>
-                      </div>
-                    </div>
-                    <div class="project-actions">
-                      <a
-                        href="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn btn-ghost-modern sm"
-                        ><i class="bi bi-github"></i> GitHub</a
-                      >
-                      <a
-                        href="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2377-4&p=f&t=MF9LlUPsji4yCNz5-0&scaling=scale-down&content-scaling=fixed&page-id=2314%3A2&starting-point-node-id=2377%3A4"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn btn-ghost-modern sm"
-                        ><i class="bi bi-figma"></i> Figma</a
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-primary-modern sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        aria-label="View details for Aplikasi Mobile E-Kompen"
-                      >
-                        <span data-i18n="btn_details">Details</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <!-- Portfolio Item 5 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-non_akademik"
-                data-project="05"
-                data-key="p5"
-                data-title="Chatbot RAG Universitas Negeri Malang"
-                data-category="Non Academic"
-                data-role="AI Engineer & Full-Stack Developer"
-                data-desc="Chatbot berbasis Retrieval-Augmented Generation (RAG) untuk informasi akademik menggunakan LLM, Vector Database, dan Knowledge Base."
-                data-stack="Python, LLM, Vector Database"
-                data-image="assets/img/portfolio/app-6.png"
-                data-github=""
-                data-figma=""
-              >
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="assets/img/portfolio/app-6.png"
-                      class="img-fluid"
-                      alt="Chatbot RAG Universitas Negeri Malang"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span class="project-index mono">PROJECT_05</span>
-                      <span
-                        class="project-badge mono"
-                        data-i18n="badge_nonacademic"
-                        >Non Academic</span
-                      >
-                    </div>
-                    <h4 class="project-title" data-i18n="p5_title">
-                      Chatbot RAG Universitas Negeri Malang
-                    </h4>
-                    <span class="project-role" data-i18n="p5_role"
-                      >AI Engineer & Full-Stack Developer</span
-                    >
-                    <p class="project-desc" data-i18n="p5_desc">
-                      Chatbot berbasis Retrieval-Augmented Generation (RAG)
-                      untuk informasi akademik menggunakan LLM, Vector Database,
-                      dan Knowledge Base.
-                    </p>
-                    <div class="project-stack">
-                      <span class="stack-label mono">Stack</span>
-                      <div class="stack-chips">
-                        <span class="chip">Python</span>
-                        <span class="chip">LLM</span>
-                        <span class="chip">Vector DB</span>
-                      </div>
-                    </div>
-                    <div class="project-actions">
-                      <a
-                        class="btn btn-ghost-modern sm"
-                        onclick="
-                          showAlert(
-                            'File tidak disimpan pada repository GitHub',
-                          )
-                        "
-                        ><i class="bi bi-github"></i> GitHub</a
-                      >
-                      <a
-                        class="btn btn-ghost-modern sm"
-                        onclick="
-                          showAlert(
-                            'File tidak disimpan pada repository GitHub',
-                          )
-                        "
-                        ><i class="bi bi-figma"></i> Figma</a
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-primary-modern sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        aria-label="View details for Chatbot RAG Universitas Negeri Malang"
-                      >
-                        <span data-i18n="btn_details">Details</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <!-- Portfolio Item 6 -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-non_akademik"
-                data-project="06"
-                data-key="p6"
-                data-title="Chatbot RAG UPDL PLN"
-                data-category="Non Academic"
-                data-role="Project Manager & Full-Stack Developer"
-                data-desc="Chatbot berbasis RAG untuk pencarian informasi dokumen pelatihan UPDL PLN menggunakan LLM, Embedding Model, dan Vector Database."
-                data-stack="Python, LLM, Embedding Model, Vector Database"
-                data-image="assets/img/portfolio/app-7.png"
-                data-github=""
-                data-figma=""
-              >
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="assets/img/portfolio/app-7.png"
-                      class="img-fluid"
-                      alt="Chatbot RAG UPDL PLN"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span class="project-index mono">PROJECT_06</span>
-                      <span
-                        class="project-badge mono"
-                        data-i18n="badge_nonacademic"
-                        >Non Academic</span
-                      >
-                    </div>
-                    <h4 class="project-title" data-i18n="p6_title">
-                      Chatbot RAG UPDL PLN
-                    </h4>
-                    <span class="project-role" data-i18n="p6_role"
-                      >Project Manager & Full-Stack Developer</span
-                    >
-                    <p class="project-desc" data-i18n="p6_desc">
-                      Chatbot berbasis RAG untuk pencarian informasi dokumen
-                      pelatihan UPDL PLN menggunakan LLM, Embedding Model, dan
-                      Vector Database.
-                    </p>
-                    <div class="project-stack">
-                      <span class="stack-label mono">Stack</span>
-                      <div class="stack-chips">
-                        <span class="chip">Python</span>
-                        <span class="chip">LLM</span>
-                        <span class="chip">Embedding</span>
-                        <span class="chip">Vector DB</span>
-                      </div>
-                    </div>
-                    <div class="project-actions">
-                      <a
-                        class="btn btn-ghost-modern sm"
-                        onclick="
-                          showAlert(
-                            'File tidak disimpan pada repository GitHub',
-                          )
-                        "
-                        ><i class="bi bi-github"></i> GitHub</a
-                      >
-                      <a
-                        class="btn btn-ghost-modern sm"
-                        onclick="
-                          showAlert(
-                            'File tidak disimpan pada repository GitHub',
-                          )
-                        "
-                        ><i class="bi bi-figma"></i> Figma</a
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-primary-modern sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#projectModal"
-                        aria-label="View details for Chatbot RAG UPDL PLN"
-                      >
-                        <span data-i18n="btn_details">Details</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <!-- Coming Soon Item -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-non_akademik filter-akademik"
-              >
-                <article class="project-card">
-                  <div class="project-image">
-                    <img
-                      src="assets/img/portfolio/app-cs.png"
-                      class="img-fluid"
-                      alt="Coming Soon"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-body text-center">
-                    <div class="project-meta justify-content-center">
-                      <span class="project-index mono">PROJECT_NEXT</span>
-                    </div>
-                    <h4 class="project-title" data-i18n="coming_soon">
-                      Coming Soon...
-                    </h4>
-                    <p class="project-desc" data-i18n="coming_desc">
-                      More exciting projects on the way!
-                    </p>
-                  </div>
-                </article>
-              </div>
-              <!-- End Portfolio Item -->
-            </div>
-            <!-- End Portfolio Container -->
-          </div>
-        </div>
-      </section>
-      <!-- End Portfolio Section -->
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <p class="section-eyebrow mono" data-i18n="ct_eyebrow">
-            Contact / Connect
-          </p>
-          <h1 data-i18n="ct_title">Let's Build Projects Together.</h1>
-          <div class="section-divider"></div>
-          <p data-i18n="ct_sub">
-            Open to opportunities, collaborations, and software development
-            projects.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-              <a
-                class="contact-card"
-                href="https://maps.google.com/?q=Malang,East+Java,Indonesia"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="contact-icon"><i class="bi bi-geo-alt"></i></span>
-                <span>
-                  <span class="contact-label mono" data-i18n="ct_location"
-                    >Location</span
-                  >
-                  <span class="contact-value" data-i18n="ct_location_val"
-                    >Malang, East Java, Indonesia</span
-                  >
-                </span>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-              <a class="contact-card">
-                <span class="contact-icon"
-                  ><i class="bi bi-telephone"></i
-                ></span>
-                <span>
-                  <span class="contact-label mono" data-i18n="ct_phone"
-                    >Phone</span
-                  >
-                  <span class="contact-value">+62 822 6419 0073</span>
-                </span>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-              <a
-                class="contact-card"
-                href="mailto:dickyhanunprasetyo@gmail.com"
-              >
-                <span class="contact-icon"><i class="bi bi-envelope"></i></span>
-                <span>
-                  <span class="contact-label mono" data-i18n="ct_email"
-                    >Email</span
-                  >
-                  <span class="contact-value"
-                    >dickyhanunprasetyo@gmail.com</span
-                  >
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Contact Section -->
-    </main>
-
-    <footer id="footer" class="footer">
       <div class="container">
-        <span class="footer-logo"
-          >DICKY<span class="logo-accent">.</span>PRAS</span
-        >
-        <p class="footer-tagline" data-i18n="ft_tagline">
-          Full Stack Developer — Building practical software solutions.
-        </p>
-        <div class="social-links d-flex justify-content-center">
-          <a
-            href="https://github.com/dickyhanunprasetyo"
-            aria-label="GitHub"
-            title="GitHub"
-            ><i class="bi bi-github"></i
-          ></a>
-          <a
-            href="https://linkedin.com/in/mochammad-dicky-hanun-prasetyo-a4575a2b7"
-            aria-label="LinkedIn"
-            title="LinkedIn"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a
-            href="https://instagram.com/dickymdhp"
-            aria-label="Instagram"
-            title="Instagram"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a
-            href="https://www.youtube.com/@pras_dicky"
-            aria-label="YouTube"
-            title="YouTube"
-            ><i class="bi bi-youtube"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/share/15NgfuHaR8/?mibextid=LQQJ4d"
-            aria-label="Facebook"
-            title="Facebook"
-            ><i class="bi bi-facebook"></i
-          ></a>
-        </div>
-        <p class="copyright">
-          © <span id="footerYear"></span> Mochammad Dicky Hanun Prasetyo
-        </p>
-      </div>
-    </footer>
-
-    <!-- Project Details Modal -->
-    <div
-      class="modal fade project-modal"
-      id="projectModal"
-      tabindex="-1"
-      aria-labelledby="pmTitle"
-      aria-hidden="true"
-    >
-      <div
-        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
-      >
-        <div class="modal-content">
-          <div class="modal-header">
-            <div>
-              <span class="modal-eyebrow mono" id="pmCategory"></span>
-              <h5 class="modal-title" id="pmTitle"></h5>
+        <div class="row hero-grid align-items-center g-5">
+          <div class="col-lg-7" data-aos="fade-up">
+            <p class="hero-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="hero_status">Available for opportunities</span>
+            </p>
+            <h2 class="hero-title">
+              <span id="animated-name" data-name="Mochammad Dicky Hanun Prasetyo">Mochammad Dicky Hanun Prasetyo</span>
+            </h2>
+            <p class="hero-role">
+              <span data-i18n="devcard_focus_1">Full Stack Web Developer</span>
+            </p>
+            <p class="hero-desc" data-i18n="hero_desc">
+              Building scalable web applications from backend systems to
+              responsive frontend experiences.
+            </p>
+            <p class="hero-typed-line">
+              <span class="typed-label mono" data-i18n="typed_label">Currently working with</span>
+              <span class="typed" data-typed-items="ReactJS, Laravel, Python, MySQL, REST API, AI Integration"></span>
+            </p>
+            <div class="hero-cta">
+              <a href="#portfolio" class="btn-primary-modern" data-i18n="hero_cta_projects">View Projects</a>
+              <a href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf" download class="btn-ghost-modern"><i
+                  class="bi bi-download"></i> Download CV</a>
             </div>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <div class="hero-social">
+              <span class="social-caption mono" data-i18n="hero_social">Find me on</span>
+              <div class="social-links">
+                <a href="https://github.com/dickyhanunprasetyo" aria-label="GitHub" title="GitHub"><i
+                    class="bi bi-github"></i></a>
+                <a href="https://linkedin.com/in/mochammad-dicky-hanun-prasetyo-a4575a2b7" aria-label="LinkedIn"
+                  title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://instagram.com/mcdicky_mdhp" aria-label="Instagram" title="Instagram"><i
+                    class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/@mdicky_mdhp6560" aria-label="YouTube" title="YouTube"><i
+                    class="bi bi-youtube"></i></a>
+                <a href="https://www.facebook.com/share/15NgfuHaR8/?mibextid=LQQJ4d" aria-label="Facebook"
+                  title="Facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <img src="" alt="" class="modal-img" id="pmImage" loading="lazy" />
-            <div class="modal-info">
-              <div class="info-line">
-                <span class="k mono" data-i18n="modal_role">Role</span>
-                <span class="v" id="pmRole"></span>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
+            <div class="dev-card">
+              <div class="dev-card-header">
+                <span class="dev-card-title mono" data-i18n="devcard_title">Developer Profile</span>
+                <span class="dev-card-id mono">PROFILE_01</span>
               </div>
-              <div class="info-line">
-                <span class="k mono">Stack</span>
-                <span class="v mono" id="pmStack"></span>
+              <div class="dev-card-body">
+                <div class="dev-row">
+                  <span class="dev-label mono" data-i18n="devcard_role">Role</span>
+                  <span class="dev-value">Full Stack Web Developer</span>
+                </div>
+                <div class="dev-row">
+                  <span class="dev-label mono" data-i18n="devcard_focus">Focus</span>
+                  <div class="dev-focus-rotator" id="focusRotator">
+                    <div class="dev-focus-viewport">
+                      <div class="dev-focus-slide">
+                        <span class="dev-focus-text" data-i18n="devcard_focus_1">Full Stack Web Developer</span>
+                      </div>
+                    </div>
+                    <div class="dev-focus-dots" aria-hidden="true">
+                      <span class="focus-dot active"></span>
+                      <span class="focus-dot"></span>
+                      <span class="focus-dot"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="dev-row">
+                  <span class="dev-label mono" data-i18n="devcard_stack">Stack</span>
+                  <span class="dev-value mono">Laravel · React · Python · MySQL</span>
+                </div>
+                <div class="dev-row">
+                  <span class="dev-label mono" data-i18n="devcard_location">Location</span>
+                  <span class="dev-value" data-i18n="devcard_location_val">Malang, Indonesia</span>
+                </div>
+                <div class="dev-row">
+                  <span class="dev-label mono" data-i18n="devcard_status">Status</span>
+                  <span class="dev-value status-ok"><span class="status-dot" aria-hidden="true"></span>
+                    <span data-i18n="devcard_available">Available</span></span>
+                </div>
               </div>
             </div>
-            <p class="modal-desc" id="pmDesc"></p>
-            <div class="modal-actions">
-              <a
-                id="pmGithub"
-                href="#"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-primary-modern"
-                ><i class="bi bi-github"></i> GitHub</a
-              >
-              <a
-                id="pmFigma"
-                href="#"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-ghost-modern"
-                ><i class="bi bi-figma"></i> Figma</a
-              >
-            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Stats -->
+    <div class="stats-strip">
+      <div class="container">
+        <div class="stats-bar" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-item">
+            <span class="stat-value mono" id="statProjects">00+</span>
+            <span class="stat-label mono" data-i18n="stat_projects">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value mono" id="statTech">00+</span>
+            <span class="stat-label mono" data-i18n="stat_tech">Tech Stack</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value mono">Full Stack</span>
+            <span class="stat-label mono" data-i18n="stat_focus">Focus</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value mono" data-i18n="stat_available">Available</span>
+            <span class="stat-label mono" data-i18n="stat_status">Status</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Scroll Top Button -->
-    <a href="#" class="scroll-top" aria-label="Scroll to top"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
-
-    <!-- Splash Screen -->
-    <div id="splash-screen" aria-hidden="true">
-      <div class="splash-grid" aria-hidden="true"></div>
-      <div
-        class="splash-particles"
-        id="splash-particles"
-        aria-hidden="true"
-      ></div>
-      <div class="splash-content">
-        <!-- Hexagon Logo Mark -->
-        <div class="splash-logo">
-          <svg
-            class="splash-hex"
-            viewBox="0 0 120 120"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- Outer hex ring -->
-            <polygon
-              points="60,8 108,36 108,84 60,112 12,84 12,36"
-              class="hex-ring"
-              fill="none"
-              stroke="url(#hexGradOuter)"
-              stroke-width="2.5"
-              stroke-dasharray="380"
-              stroke-dashoffset="380"
-            />
-            <!-- Inner hex ring -->
-            <polygon
-              points="60,24 92,42 92,78 60,96 28,78 28,42"
-              class="hex-ring-inner"
-              fill="none"
-              stroke="url(#hexGradInner)"
-              stroke-width="2"
-              stroke-dasharray="280"
-              stroke-dashoffset="280"
-            />
-            <!-- Center text -->
-            <text
-              x="60"
-              y="68"
-              text-anchor="middle"
-              class="hex-text"
-              fill="url(#hexGradInner)"
-              font-family="'JetBrains Mono', monospace"
-              font-size="24"
-              font-weight="500"
-            >
-              MDHP
-            </text>
-            <defs>
-              <linearGradient
-                id="hexGradOuter"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stop-color="#7c5cfc" />
-                <stop offset="100%" stop-color="#22d3ee" />
-              </linearGradient>
-              <linearGradient
-                id="hexGradInner"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stop-color="#22d3ee" />
-                <stop offset="100%" stop-color="#7c5cfc" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <!-- Pulsing glow rings -->
-          <div class="splash-glow-ring ring-1"></div>
-          <div class="splash-glow-ring ring-2"></div>
-          <div class="splash-glow-ring ring-3"></div>
-        </div>
-
-        <!-- Title -->
-        <h1
-          class="splash-title"
-          id="splash-title"
-          data-splash-name="Dicky Prasetyo"
-        ></h1>
-        <div class="splash-divider"><span></span></div>
-        <p class="splash-subtitle">
-          <span class="splash-sub-slash">&#47;&#47;</span> Full Stack Developer
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <p class="section-eyebrow mono" data-i18n="about_eyebrow">
+          About / Profile
         </p>
-
-        <!-- Loading Progress Bar -->
-        <div class="splash-progress-track">
-          <div class="splash-progress-fill" id="splash-progress-fill"></div>
-          <div class="splash-progress-glow"></div>
-        </div>
-        <p class="splash-loading-text mono" id="splash-loading-text">LOADING</p>
+        <h1 data-i18n="about_title">About Me</h1>
+        <div class="section-divider"></div>
+        <p data-i18n="about_sub">Get to know more about me</p>
       </div>
-      <!-- Corner decorations -->
-      <div class="splash-corner top-left"></div>
-      <div class="splash-corner top-right"></div>
-      <div class="splash-corner bottom-left"></div>
-      <div class="splash-corner bottom-right"></div>
-      <!-- Scan line effect -->
-      <div class="splash-scanline"></div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-4">
+            <div class="profile-frame">
+              <img src="assets/img/profile_me.jpg" class="img-fluid" alt="Mochammad Dicky Hanun Prasetyo"
+                loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <h3 class="about-name">Mochammad Dicky Hanun Prasetyo</h3>
+            <p class="about-bio" data-i18n="about_bio">
+              Saya merupakan lulusan Sarjana Terapan Sistem Informasi Bisnis
+              dari Politeknik Negeri Malang, Jurusan Teknologi Informasi.
+              Memiliki pengalaman dalam Project Manager, pengembangan
+              aplikasi web secara fullstack, serta pengembangan AI chatbot.
+              Terbiasa merancang dan mengembangkan aplikasi dari sisi frontend
+              hingga backend, mengelola database, serta mengintegrasikan
+              teknologi AI untuk membangun chatbot yang interaktif dan
+              adaptif. Memiliki pengalaman dalam memimpin dan mengelola
+              proyek, mengoordinasikan tim, menyusun perencanaan kerja, serta
+              memastikan proyek berjalan sesuai tujuan dan target yang
+              ditetapkan. Mampu bekerja secara mandiri maupun dalam tim,
+              memiliki kemampuan problem solving yang baik, dan cepat
+              beradaptasi dengan teknologi serta lingkungan kerja baru.
+            </p>
+
+            <!-- Soft-Skill and Hard-Skill -->
+            <div class="row g-4">
+              <!-- Soft-Skill -->
+              <div class="col-md-6">
+                <h5 class="skill-heading">
+                  <i class="bi bi-people-fill"></i>
+                  <span data-i18n="soft_title">Soft Skills</span>
+                </h5>
+                <div class="skill-grid">
+                  <span class="skill-tag">Leadership</span>
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag" data-i18n="skill_english">Speaking English</span>
+                  <span class="skill-tag">Time Management</span>
+                  <span class="skill-tag" data-i18n="skill_team">Team Work</span>
+                  <span class="skill-tag">Communication</span>
+                </div>
+              </div>
+              <!-- Hard-Skill -->
+              <div class="col-md-6">
+                <h5 class="skill-heading">
+                  <i class="bi bi-code-slash"></i>
+                  <span data-i18n="tech_title">Tech Stack</span>
+                </h5>
+                <div class="skill-grid">
+                  <span class="tech-chip chip-laravel" title="PHP Laravel"><i class="bi bi-filetype-php"></i>PHP
+                    Laravel</span>
+                  <span class="tech-chip chip-react" title="ReactJS"><i class="bi bi-filetype-jsx"></i>ReactJS</span>
+                  <span class="tech-chip chip-mysql" title="MySQL"><i class="bi bi-database"></i>MySQL</span>
+                  <span class="tech-chip chip-postgres" title="PostgreSQL"><i
+                      class="bi bi-database"></i>PostgreSQL</span>
+                  <span class="tech-chip chip-python" title="Python"><i class="bi bi-filetype-py"></i>Python</span>
+                  <span class="tech-chip chip-flutter" title="Flutter"><i class="bi bi-phone"></i>Flutter</span>
+                  <span class="tech-chip chip-filament" title="Filament"><i class="bi bi-command"></i>Filament</span>
+                  <span class="tech-chip chip-api" title="REST API"><i class="bi bi-plug"></i>REST API</span>
+                  <span class="tech-chip chip-looker" title="Google Looker Studio"><i class="bi bi-bar-chart"></i>Google
+                    Looker Studio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Display Section -->
+    <section id="CV" class="cv section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <p class="section-eyebrow mono" data-i18n="cv_eyebrow">CV / Resume</p>
+        <h1 data-i18n="cv_title">My CV</h1>
+        <div class="section-divider"></div>
+        <p data-i18n="cv_sub">
+          Professional background, skills and experience.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="cv-toolbar" data-aos="fade-up">
+          <a href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf" download class="btn-primary-modern">
+            <i class="bi bi-download"></i> Download CV
+          </a>
+          <a href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf" target="_blank" rel="noopener"
+            class="btn-ghost-modern">
+            <i class="bi bi-box-arrow-up-right"></i>
+            <span data-i18n="cv_open">Open Document</span>
+          </a>
+        </div>
+
+        <div class="doc-panel" data-aos="fade-up" data-aos-delay="100">
+          <div class="doc-panel-header">
+            <span class="doc-file">
+              <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+              Mochammad-Dicky-Hanun-Prasetyo-CV.pdf
+            </span>
+            <span class="doc-badge mono" data-i18n="cv_badge">PDF Document</span>
+          </div>
+          <div class="doc-panel-body">
+            <iframe src="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf" title="CV Preview" loading="lazy"></iframe>
+          </div>
+          <div class="doc-panel-footer d-lg-none">
+            <a href="assets/pdf/Mochammad-Dicky-Hanun-Prasetyo-CV.pdf" target="_blank" rel="noopener"
+              class="btn-primary-modern w-100">
+              <i class="bi bi-eye"></i>
+              <span data-i18n="cv_open_mobile">Open CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <p class="section-eyebrow mono" data-i18n="pr_eyebrow">
+          Projects / Work
+        </p>
+        <h1 data-i18n="pr_title">Portfolio & Projects</h1>
+        <div class="section-divider"></div>
+        <p data-i18n="pr_sub">
+          Selected applications and systems I have built.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active" data-i18n="filter_all">
+              All
+            </li>
+            <li data-filter=".filter-akademik">Akademik</li>
+            <li data-filter=".filter-non_akademik">Non Akademik</li>
+          </ul>
+          <!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <!-- Portfolio Item 1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik" data-project="01" data-key="p1"
+              data-title="Web Survey Kepuasan Pelanggan Polinema" data-category="Academic"
+              data-role="Back-End Developer"
+              data-desc="Project Website Sistem Informasi Survey Kepuasan Pelanggan Polinema — HTML, PHP native, JavaScript, MySQL, Figma."
+              data-stack="HTML, PHP, MySQL, JavaScript" data-image="assets/img/portfolio/app-1.png" data-github=""
+              data-figma="https://www.figma.com/proto/Nwwu6qJ7jW9CbJe2K2mVSy/Design-Sistem-Kepuasan-Pelanggan-Polinema?node-id=1167-1001&node-type=canvas&t=neAspA3o31SPzTKE-1&scaling=min-zoom&content-scaling=fixed&page-id=993%3A1290&starting-point-node-id=1167%3A1001">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="assets/img/portfolio/app-1.png" class="img-fluid"
+                    alt="Web Survey Kepuasan Pelanggan Polinema" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-meta">
+                    <span class="project-index mono">PROJECT_01</span>
+                    <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                  </div>
+                  <h4 class="project-title" data-i18n="p1_title">
+                    Web Survey Kepuasan Pelanggan Polinema
+                  </h4>
+                  <span class="project-role" data-i18n="p1_role">Back-End Developer</span>
+                  <p class="project-desc" data-i18n="p1_desc">
+                    Project Website Sistem Informasi Survey Kepuasan Pelanggan
+                    Polinema — HTML, PHP native, JavaScript, MySQL, Figma.
+                  </p>
+                  <div class="project-stack">
+                    <span class="stack-label mono">Stack</span>
+                    <div class="stack-chips">
+                      <span class="chip">HTML</span>
+                      <span class="chip">PHP</span>
+                      <span class="chip">MySQL</span>
+                      <span class="chip">JavaScript</span>
+                    </div>
+                  </div>
+                  <div class="project-actions">
+                    <a class="btn btn-ghost-modern sm" onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "><i class="bi bi-github"></i> GitHub</a>
+                    <a href="https://www.figma.com/proto/Nwwu6qJ7jW9CbJe2K2mVSy/Design-Sistem-Kepuasan-Pelanggan-Polinema?node-id=1167-1001&node-type=canvas&t=neAspA3o31SPzTKE-1&scaling=min-zoom&content-scaling=fixed&page-id=993%3A1290&starting-point-node-id=1167%3A1001"
+                      target="_blank" rel="noopener" class="btn btn-ghost-modern sm"><i class="bi bi-figma"></i>
+                      Figma</a>
+                    <button type="button" class="btn btn-primary-modern sm" data-bs-toggle="modal"
+                      data-bs-target="#projectModal"
+                      aria-label="View details for Web Survey Kepuasan Pelanggan Polinema">
+                      <span data-i18n="btn_details">Details</span>
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- Portfolio Item 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik" data-project="02" data-key="p2"
+              data-title="Web Point of Sales (POS)" data-category="Academic" data-role="Front-End & Back-End Developer"
+              data-desc="Project Website Point of Sales (POS) — Figma UI, PHP Laravel 10.3, MySQL."
+              data-stack="PHP Laravel, MySQL" data-image="assets/img/portfolio/app-2.png"
+              data-github="https://github.com/dickyhanunprasetyo/PWL_POS" data-figma="">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="assets/img/portfolio/app-2.png" class="img-fluid" alt="Web Point of Sales" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-meta">
+                    <span class="project-index mono">PROJECT_02</span>
+                    <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                  </div>
+                  <h4 class="project-title" data-i18n="p2_title">
+                    Web Point of Sales (POS)
+                  </h4>
+                  <span class="project-role" data-i18n="p2_role">Front-End & Back-End Developer</span>
+                  <p class="project-desc" data-i18n="p2_desc">
+                    Project Website Point of Sales (POS) — Figma UI, PHP
+                    Laravel 10.3, MySQL.
+                  </p>
+                  <div class="project-stack">
+                    <span class="stack-label mono">Stack</span>
+                    <div class="stack-chips">
+                      <span class="chip">PHP Laravel</span>
+                      <span class="chip">MySQL</span>
+                    </div>
+                  </div>
+                  <div class="project-actions">
+                    <a href="https://github.com/dickyhanunprasetyo/PWL_POS" target="_blank" rel="noopener"
+                      class="btn btn-ghost-modern sm"><i class="bi bi-github"></i> GitHub</a>
+                    <a class="btn btn-ghost-modern sm" onclick="
+                          showAlert('Tampilan UI tidak disimpan pada Figma')
+                        "><i class="bi bi-figma"></i> Figma</a>
+                    <button type="button" class="btn btn-primary-modern sm" data-bs-toggle="modal"
+                      data-bs-target="#projectModal" aria-label="View details for Web Point of Sales">
+                      <span data-i18n="btn_details">Details</span>
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- Portfolio Item 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik" data-project="03" data-key="p3"
+              data-title="Web Sistem Kompensasi JTI" data-category="Academic" data-role="API Back-End Developer"
+              data-desc="Project Website Sistem Kompensasi JTI Polinema — Figma UI, PHP Laravel 10.3, MySQL."
+              data-stack="PHP Laravel, MySQL" data-image="assets/img/portfolio/app-3.png"
+              data-github="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech"
+              data-figma="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2591-891&t=MF9LlUPsji4yCNz5-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2591%3A891">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="assets/img/portfolio/app-3.png" class="img-fluid" alt="Web Sistem Kompensasi JTI"
+                    loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-meta">
+                    <span class="project-index mono">PROJECT_03</span>
+                    <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                  </div>
+                  <h4 class="project-title" data-i18n="p3_title">
+                    Web Sistem Kompensasi JTI
+                  </h4>
+                  <span class="project-role" data-i18n="p3_role">API Back-End Developer</span>
+                  <p class="project-desc" data-i18n="p3_desc">
+                    Project Website Sistem Kompensasi JTI Polinema — Figma UI,
+                    PHP Laravel 10.3, MySQL.
+                  </p>
+                  <div class="project-stack">
+                    <span class="stack-label mono">Stack</span>
+                    <div class="stack-chips">
+                      <span class="chip">PHP Laravel</span>
+                      <span class="chip">MySQL</span>
+                    </div>
+                  </div>
+                  <div class="project-actions">
+                    <a href="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech" target="_blank"
+                      rel="noopener" class="btn btn-ghost-modern sm"><i class="bi bi-github"></i> GitHub</a>
+                    <a href="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2591-891&t=MF9LlUPsji4yCNz5-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2591%3A891"
+                      target="_blank" rel="noopener" class="btn btn-ghost-modern sm"><i class="bi bi-figma"></i>
+                      Figma</a>
+                    <button type="button" class="btn btn-primary-modern sm" data-bs-toggle="modal"
+                      data-bs-target="#projectModal" aria-label="View details for Web Sistem Kompensasi JTI">
+                      <span data-i18n="btn_details">Details</span>
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- Portfolio Item 4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-akademik" data-project="04" data-key="p4"
+              data-title="Aplikasi Mobile E-Kompen (Sikomti_app)" data-category="Academic"
+              data-role="Front-End & Back-End Developer"
+              data-desc="Aplikasi Mobile E-Kompen menggunakan Flutter Dart dengan API dari website Sistem Kompen JTI."
+              data-stack="Flutter, Dart, REST API" data-image="assets/img/portfolio/app-4.png"
+              data-github="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech"
+              data-figma="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2377-4&p=f&t=MF9LlUPsji4yCNz5-0&scaling=scale-down&content-scaling=fixed&page-id=2314%3A2&starting-point-node-id=2377%3A4">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="assets/img/portfolio/app-4.png" class="img-fluid" alt="Aplikasi Sistem Kompensasi JTI"
+                    loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-meta">
+                    <span class="project-index mono">PROJECT_04</span>
+                    <span class="project-badge mono" data-i18n="badge_academic">Academic</span>
+                  </div>
+                  <h4 class="project-title" data-i18n="p4_title">
+                    Aplikasi Mobile E-Kompen (Sikomti_app)
+                  </h4>
+                  <span class="project-role" data-i18n="p4_role">Front-End & Back-End Developer</span>
+                  <p class="project-desc" data-i18n="p4_desc">
+                    Aplikasi Mobile E-Kompen menggunakan Flutter Dart dengan
+                    API dari website Sistem Kompen JTI.
+                  </p>
+                  <div class="project-stack">
+                    <span class="stack-label mono">Stack</span>
+                    <div class="stack-chips">
+                      <span class="chip">Flutter</span>
+                      <span class="chip">Dart</span>
+                      <span class="chip">REST API</span>
+                    </div>
+                  </div>
+                  <div class="project-actions">
+                    <a href="https://github.com/dickyhanunprasetyo/PBL-Kompen-InfinityTech" target="_blank"
+                      rel="noopener" class="btn btn-ghost-modern sm"><i class="bi bi-github"></i> GitHub</a>
+                    <a href="https://www.figma.com/proto/FM1XvMX3dlHxli3KbmPEV9/Desain-Sistem-Kompen-Kelompok-2?node-id=2377-4&p=f&t=MF9LlUPsji4yCNz5-0&scaling=scale-down&content-scaling=fixed&page-id=2314%3A2&starting-point-node-id=2377%3A4"
+                      target="_blank" rel="noopener" class="btn btn-ghost-modern sm"><i class="bi bi-figma"></i>
+                      Figma</a>
+                    <button type="button" class="btn btn-primary-modern sm" data-bs-toggle="modal"
+                      data-bs-target="#projectModal" aria-label="View details for Aplikasi Mobile E-Kompen">
+                      <span data-i18n="btn_details">Details</span>
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- Portfolio Item 5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-non_akademik" data-project="05"
+              data-key="p5" data-title="Chatbot RAG Universitas Negeri Malang" data-category="Non Academic"
+              data-role="AI Engineer & Full-Stack Developer"
+              data-desc="Chatbot berbasis Retrieval-Augmented Generation (RAG) untuk informasi akademik menggunakan LLM, Vector Database, dan Knowledge Base."
+              data-stack="Python, LLM, Vector Database" data-image="assets/img/portfolio/app-6.png" data-github=""
+              data-figma="">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="assets/img/portfolio/app-6.png" class="img-fluid"
+                    alt="Chatbot RAG Universitas Negeri Malang" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-meta">
+                    <span class="project-index mono">PROJECT_05</span>
+                    <span class="project-badge mono" data-i18n="badge_nonacademic">Non Academic</span>
+                  </div>
+                  <h4 class="project-title" data-i18n="p5_title">
+                    Chatbot RAG Universitas Negeri Malang
+                  </h4>
+                  <span class="project-role" data-i18n="p5_role">AI Engineer & Full-Stack Developer</span>
+                  <p class="project-desc" data-i18n="p5_desc">
+                    Chatbot berbasis Retrieval-Augmented Generation (RAG)
+                    untuk informasi akademik menggunakan LLM, Vector Database,
+                    dan Knowledge Base.
+                  </p>
+                  <div class="project-stack">
+                    <span class="stack-label mono">Stack</span>
+                    <div class="stack-chips">
+                      <span class="chip">Python</span>
+                      <span class="chip">LLM</span>
+                      <span class="chip">Vector DB</span>
+                    </div>
+                  </div>
+                  <div class="project-actions">
+                    <a class="btn btn-ghost-modern sm" onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "><i class="bi bi-github"></i> GitHub</a>
+                    <a class="btn btn-ghost-modern sm" onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "><i class="bi bi-figma"></i> Figma</a>
+                    <button type="button" class="btn btn-primary-modern sm" data-bs-toggle="modal"
+                      data-bs-target="#projectModal"
+                      aria-label="View details for Chatbot RAG Universitas Negeri Malang">
+                      <span data-i18n="btn_details">Details</span>
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- Portfolio Item 6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-non_akademik" data-project="06"
+              data-key="p6" data-title="Chatbot RAG UPDL PLN" data-category="Non Academic"
+              data-role="Project Manager & Full-Stack Developer"
+              data-desc="Chatbot berbasis RAG untuk pencarian informasi dokumen pelatihan UPDL PLN menggunakan LLM, Embedding Model, dan Vector Database."
+              data-stack="Python, LLM, Embedding Model, Vector Database" data-image="assets/img/portfolio/app-7.png"
+              data-github="" data-figma="">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="assets/img/portfolio/app-7.png" class="img-fluid" alt="Chatbot RAG UPDL PLN"
+                    loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-meta">
+                    <span class="project-index mono">PROJECT_06</span>
+                    <span class="project-badge mono" data-i18n="badge_nonacademic">Non Academic</span>
+                  </div>
+                  <h4 class="project-title" data-i18n="p6_title">
+                    Chatbot RAG UPDL PLN
+                  </h4>
+                  <span class="project-role" data-i18n="p6_role">Project Manager & Full-Stack Developer</span>
+                  <p class="project-desc" data-i18n="p6_desc">
+                    Chatbot berbasis RAG untuk pencarian informasi dokumen
+                    pelatihan UPDL PLN menggunakan LLM, Embedding Model, dan
+                    Vector Database.
+                  </p>
+                  <div class="project-stack">
+                    <span class="stack-label mono">Stack</span>
+                    <div class="stack-chips">
+                      <span class="chip">Python</span>
+                      <span class="chip">LLM</span>
+                      <span class="chip">Embedding</span>
+                      <span class="chip">Vector DB</span>
+                    </div>
+                  </div>
+                  <div class="project-actions">
+                    <a class="btn btn-ghost-modern sm" onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "><i class="bi bi-github"></i> GitHub</a>
+                    <a class="btn btn-ghost-modern sm" onclick="
+                          showAlert(
+                            'File tidak disimpan pada repository GitHub',
+                          )
+                        "><i class="bi bi-figma"></i> Figma</a>
+                    <button type="button" class="btn btn-primary-modern sm" data-bs-toggle="modal"
+                      data-bs-target="#projectModal" aria-label="View details for Chatbot RAG UPDL PLN">
+                      <span data-i18n="btn_details">Details</span>
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <!-- Coming Soon Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-non_akademik filter-akademik">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="assets/img/portfolio/app-cs.png" class="img-fluid" alt="Coming Soon" loading="lazy" />
+                </div>
+                <div class="project-body text-center">
+                  <div class="project-meta justify-content-center">
+                    <span class="project-index mono">PROJECT_NEXT</span>
+                  </div>
+                  <h4 class="project-title" data-i18n="coming_soon">
+                    Coming Soon...
+                  </h4>
+                  <p class="project-desc" data-i18n="coming_desc">
+                    More exciting projects on the way!
+                  </p>
+                </div>
+              </article>
+            </div>
+            <!-- End Portfolio Item -->
+          </div>
+          <!-- End Portfolio Container -->
+        </div>
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <p class="section-eyebrow mono" data-i18n="ct_eyebrow">
+          Contact / Connect
+        </p>
+        <h1 data-i18n="ct_title">Let's Build Projects Together.</h1>
+        <div class="section-divider"></div>
+        <p data-i18n="ct_sub">
+          Open to opportunities, collaborations, and software development
+          projects.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <a class="contact-card" href="https://maps.google.com/?q=Malang,East+Java,Indonesia" target="_blank"
+              rel="noopener">
+              <span class="contact-icon"><i class="bi bi-geo-alt"></i></span>
+              <span>
+                <span class="contact-label mono" data-i18n="ct_location">Location</span>
+                <span class="contact-value" data-i18n="ct_location_val">Malang, East Java, Indonesia</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a class="contact-card">
+              <span class="contact-icon"><i class="bi bi-telephone"></i></span>
+              <span>
+                <span class="contact-label mono" data-i18n="ct_phone">Phone</span>
+                <span class="contact-value">+62 822 6419 0073</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a class="contact-card" href="mailto:dickyhanunprasetyo@gmail.com">
+              <span class="contact-icon"><i class="bi bi-envelope"></i></span>
+              <span>
+                <span class="contact-label mono" data-i18n="ct_email">Email</span>
+                <span class="contact-value">dickyhanunprasetyo@gmail.com</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <span class="footer-logo">DICKY<span class="logo-accent">.</span>PRAS</span>
+      <p class="footer-tagline" data-i18n="ft_tagline">
+        Full Stack Web Developer — Building practical software solutions.
+      </p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/dickyhanunprasetyo" aria-label="GitHub" title="GitHub"><i
+            class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/mochammad-dicky-hanun-prasetyo-a4575a2b7" aria-label="LinkedIn"
+          title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://instagram.com/dickymdhp" aria-label="Instagram" title="Instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@pras_dicky" aria-label="YouTube" title="YouTube"><i
+            class="bi bi-youtube"></i></a>
+        <a href="https://www.facebook.com/share/15NgfuHaR8/?mibextid=LQQJ4d" aria-label="Facebook" title="Facebook"><i
+            class="bi bi-facebook"></i></a>
+      </div>
+      <p class="copyright">
+        © <span id="footerYear"></span> Mochammad Dicky Hanun Prasetyo
+      </p>
     </div>
+  </footer>
 
-    <!-- Preloader (legacy fallback) -->
-    <div id="preloader" style="display: none"></div>
+  <!-- Project Details Modal -->
+  <div class="modal fade project-modal" id="projectModal" tabindex="-1" aria-labelledby="pmTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-eyebrow mono" id="pmCategory"></span>
+            <h5 class="modal-title" id="pmTitle"></h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" alt="" class="modal-img" id="pmImage" loading="lazy" />
+          <div class="modal-info">
+            <div class="info-line">
+              <span class="k mono" data-i18n="modal_role">Role</span>
+              <span class="v" id="pmRole"></span>
+            </div>
+            <div class="info-line">
+              <span class="k mono">Stack</span>
+              <span class="v mono" id="pmStack"></span>
+            </div>
+          </div>
+          <p class="modal-desc" id="pmDesc"></p>
+          <div class="modal-actions">
+            <a id="pmGithub" href="#" target="_blank" rel="noopener" class="btn btn-primary-modern"><i
+                class="bi bi-github"></i> GitHub</a>
+            <a id="pmFigma" href="#" target="_blank" rel="noopener" class="btn btn-ghost-modern"><i
+                class="bi bi-figma"></i> Figma</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <!-- Scroll Top Button -->
+  <a href="#" class="scroll-top" aria-label="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js?v=17"></script>
+  <!-- Splash Screen -->
+  <div id="splash-screen" aria-hidden="true">
+    <div class="splash-grid" aria-hidden="true"></div>
+    <div class="splash-particles" id="splash-particles" aria-hidden="true"></div>
+    <div class="splash-content">
+      <!-- Hexagon Logo Mark -->
+      <div class="splash-logo">
+        <svg class="splash-hex" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer hex ring -->
+          <polygon points="60,8 108,36 108,84 60,112 12,84 12,36" class="hex-ring" fill="none"
+            stroke="url(#hexGradOuter)" stroke-width="2.5" stroke-dasharray="380" stroke-dashoffset="380" />
+          <!-- Inner hex ring -->
+          <polygon points="60,24 92,42 92,78 60,96 28,78 28,42" class="hex-ring-inner" fill="none"
+            stroke="url(#hexGradInner)" stroke-width="2" stroke-dasharray="280" stroke-dashoffset="280" />
+          <!-- Center text -->
+          <text x="60" y="68" text-anchor="middle" class="hex-text" fill="url(#hexGradInner)"
+            font-family="'JetBrains Mono', monospace" font-size="24" font-weight="500">
+            MDHP
+          </text>
+          <defs>
+            <linearGradient id="hexGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c5cfc" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <linearGradient id="hexGradInner" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22d3ee" />
+              <stop offset="100%" stop-color="#7c5cfc" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <!-- Pulsing glow rings -->
+        <div class="splash-glow-ring ring-1"></div>
+        <div class="splash-glow-ring ring-2"></div>
+        <div class="splash-glow-ring ring-3"></div>
+      </div>
 
-    <!-- Global Alert Function -->
-    <script>
-      function showAlert(message) {
-        alert(message || "File tidak disimpan pada repository GitHub");
-      }
-    </script>
-  </body>
+      <!-- Title -->
+      <h1 class="splash-title" id="splash-title" data-splash-name="Dicky Prasetyo"></h1>
+      <div class="splash-divider"><span></span></div>
+      <p class="splash-subtitle">
+        <span class="splash-sub-slash">&#47;&#47;</span> Full Stack Web Developer
+      </p>
+
+      <!-- Loading Progress Bar -->
+      <div class="splash-progress-track">
+        <div class="splash-progress-fill" id="splash-progress-fill"></div>
+        <div class="splash-progress-glow"></div>
+      </div>
+      <p class="splash-loading-text mono" id="splash-loading-text">LOADING</p>
+    </div>
+    <!-- Corner decorations -->
+    <div class="splash-corner top-left"></div>
+    <div class="splash-corner top-right"></div>
+    <div class="splash-corner bottom-left"></div>
+    <div class="splash-corner bottom-right"></div>
+    <!-- Scan line effect -->
+    <div class="splash-scanline"></div>
+  </div>
+
+  <!-- Preloader (legacy fallback) -->
+  <div id="preloader" style="display: none"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js?v=17"></script>
+
+  <!-- Global Alert Function -->
+  <script>
+    function showAlert(message) {
+      alert(message || "File tidak disimpan pada repository GitHub");
+    }
+  </script>
+</body>
+
 </html>
