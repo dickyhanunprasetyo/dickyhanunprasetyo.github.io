@@ -62,7 +62,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css?v=15" rel="stylesheet" />
+  <link href="assets/css/main.css?v=17" rel="stylesheet" />
 </head>
 
 <body class="index-page">
@@ -313,6 +313,9 @@
                   <span class="tech-chip chip-api" title="REST API"><i class="bi bi-plug"></i>REST API</span>
                   <span class="tech-chip chip-looker" title="Google Looker Studio"><i class="bi bi-bar-chart"></i>Google
                     Looker Studio</span>
+                  <span class="tech-chip chip-excel" title="Microsoft Excel"><i
+                      class="bi bi-file-earmark-excel"></i>Microsoft Excel</span>
+                  <span class="tech-chip chip-erp" title="ERP"><i class="bi bi-diagram-3"></i>ERP</span>
                 </div>
               </div>
             </div>
@@ -857,61 +860,35 @@
 
   <!-- Splash Screen -->
   <div id="splash-screen" aria-hidden="true">
-    <div class="splash-grid" aria-hidden="true"></div>
-    <div class="splash-particles" id="splash-particles" aria-hidden="true"></div>
+    <div class="splash-ambient" aria-hidden="true"></div>
     <div class="splash-content">
-      <!-- Hexagon Logo Mark -->
-      <div class="splash-logo">
-        <svg class="splash-hex" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <!-- Outer hex ring -->
-          <polygon points="60,8 108,36 108,84 60,112 12,84 12,36" class="hex-ring" fill="none"
-            stroke="url(#hexGradOuter)" stroke-width="2.5" stroke-dasharray="380" stroke-dashoffset="380" />
-          <!-- Inner hex ring -->
-          <polygon points="60,24 92,42 92,78 60,96 28,78 28,42" class="hex-ring-inner" fill="none"
-            stroke="url(#hexGradInner)" stroke-width="2" stroke-dasharray="280" stroke-dashoffset="280" />
-          <!-- Center text -->
-          <text x="60" y="68" text-anchor="middle" class="hex-text" fill="url(#hexGradInner)"
-            font-family="'JetBrains Mono', monospace" font-size="24" font-weight="500">
-            MDHP
-          </text>
-          <defs>
-            <linearGradient id="hexGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#7c5cfc" />
-              <stop offset="100%" stop-color="#22d3ee" />
-            </linearGradient>
-            <linearGradient id="hexGradInner" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#22d3ee" />
-              <stop offset="100%" stop-color="#7c5cfc" />
-            </linearGradient>
-          </defs>
+      <!-- Minimalist Brand Logo -->
+      <div class="splash-emblem" aria-hidden="true">
+        <svg class="splash-logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 8L6 20L12 32" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M28 8L34 20L28 32" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <line x1="22" y1="10" x2="16" y2="30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            opacity="0.75" />
         </svg>
-        <!-- Pulsing glow rings -->
-        <div class="splash-glow-ring ring-1"></div>
-        <div class="splash-glow-ring ring-2"></div>
-        <div class="splash-glow-ring ring-3"></div>
       </div>
 
-      <!-- Title -->
-      <h1 class="splash-title" id="splash-title" data-splash-name="Dicky Prasetyo"></h1>
-      <div class="splash-divider"><span></span></div>
-      <p class="splash-subtitle">
-        <span class="splash-sub-slash">&#47;&#47;</span> Full Stack Web Developer
-      </p>
+      <!-- Clean Typography -->
+      <h1 class="splash-title">Dicky Prasetyo</h1>
+      <p class="splash-subtitle mono">Full Stack Web Developer</p>
 
-      <!-- Loading Progress Bar -->
-      <div class="splash-progress-track">
-        <div class="splash-progress-fill" id="splash-progress-fill"></div>
-        <div class="splash-progress-glow"></div>
+      <!-- Minimal Progress Bar -->
+      <div class="splash-progress-wrapper">
+        <div class="splash-progress-track">
+          <div class="splash-progress-fill" id="splash-progress-fill"></div>
+        </div>
+        <div class="splash-meta mono">
+          <span class="splash-status" id="splash-status">Loading</span>
+          <span class="splash-percent" id="splash-percent">0%</span>
+        </div>
       </div>
-      <p class="splash-loading-text mono" id="splash-loading-text">LOADING</p>
     </div>
-    <!-- Corner decorations -->
-    <div class="splash-corner top-left"></div>
-    <div class="splash-corner top-right"></div>
-    <div class="splash-corner bottom-left"></div>
-    <div class="splash-corner bottom-right"></div>
-    <!-- Scan line effect -->
-    <div class="splash-scanline"></div>
   </div>
 
   <!-- Preloader (legacy fallback) -->
@@ -925,7 +902,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js?v=17"></script>
+  <script src="assets/js/main.js?v=18"></script>
 
   <!-- Global Alert Function -->
   <script>

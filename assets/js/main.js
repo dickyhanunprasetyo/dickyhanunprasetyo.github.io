@@ -60,273 +60,82 @@
   });
 
   /**
-   * Splash Screen — Modern tech loading with progress simulation
+   * Splash Screen — Fresh & Minimalist Loading
    */
   const splashScreen = document.querySelector("#splash-screen");
   const splashProgressFill = document.getElementById("splash-progress-fill");
-  const splashProgressGlow = document.querySelector(".splash-progress-glow");
-  const splashParticlesContainer = document.getElementById("splash-particles");
-  const splashLoadingText = document.getElementById("splash-loading-text");
+  const splashPercent = document.getElementById("splash-percent");
+  const splashStatus = document.getElementById("splash-status");
 
   if (splashScreen) {
-    // ---- Build title dynamically with correct delays (no nth-child bugs) ----
-    const splashTitleEl = document.getElementById("splash-title");
-    if (splashTitleEl) {
-      const rawName = splashTitleEl.getAttribute("data-splash-name") || "MDHP";
-      // Parse name into segments (words separated by spaces)
-      const nameParts = rawName.split(/(\s+)/); // preserves spaces
-      const letterDelay = 55; // ms between each letter
-
-      splashTitleEl.textContent = ""; // clear
-
-      let globalIndex = 0;
-      nameParts.forEach((part) => {
-        if (/^\s+$/.test(part)) {
-          // Space segment
-          const spaceSpan = document.createElement("span");
-          spaceSpan.className = "splash-space";
-          spaceSpan.style.width = "18px";
-          spaceSpan.style.display = "inline-block";
-          splashTitleEl.appendChild(spaceSpan);
-        } else {
-          // Word segment
-          [...part].forEach((char, idx) => {
-            const span = document.createElement("span");
-            span.className = "splash-letter";
-            span.textContent = char;
-            // First letter of each word gets accent color
-            if (idx === 0) span.classList.add("word-start");
-            // Set data-delay for JS reveal
-            span.setAttribute("data-delay", globalIndex * letterDelay);
-            splashTitleEl.appendChild(span);
-            globalIndex++;
-          });
-        }
-      });
-
-      // Staggered reveal using setTimeout
-      const allLetters = splashTitleEl.querySelectorAll(".splash-letter");
-      allLetters.forEach((letter) => {
-        const delay = parseInt(letter.getAttribute("data-delay"), 10);
-        setTimeout(() => {
-          letter.classList.add("revealed");
-        }, 800 + delay); // start after logo draw (~0.8s)
-      });
-    }
-
-    // Simulate loading progress
     let loadProgress = 0;
-    let loadInterval;
-    let dotInterval;
+    let loadInterval = null;
+    let isFinished = false;
+    const splashStartTime = Date.now();
+    const MIN_SPLASH_DURATION = reducedMotion ? 200 : 700; // Snappy minimum display time
 
-    // ---- Animated loading text with bouncing dots ----
-    const loadingBase = "LOADING";
-    let dotCount = 0;
-
-    const updateLoadingText = (text, withDots) => {
-      if (!splashLoadingText) return;
-      splashLoadingText.textContent = text;
-      if (withDots) {
-        // Append 3 span-dots with staggered bounce
-        for (let i = 1; i <= 3; i++) {
-          const dot = document.createElement("span");
-          dot.className = "dot";
-          dot.textContent = ".";
-          splashLoadingText.appendChild(dot);
-        }
-      }
-    };
-
-    // Start dot cycling
-    const startDotAnimation = () => {
-      updateLoadingText(loadingBase, true);
-      dotInterval = setInterval(() => {
-        if (splashLoadingText && !splashLoadingText.classList.contains("is-done")) {
-          // Re-render dots to reset animation
-          splashLoadingText.textContent = loadingBase;
-          for (let i = 1; i <= 3; i++) {
-            const dot = document.createElement("span");
-            dot.className = "dot";
-            dot.textContent = ".";
-            splashLoadingText.appendChild(dot);
-          }
-        }
-      }, 1500); // re-trigger dot animation every 1.5s
-    };
-
-    // Stop dot animation and show completion
-    const showLoadingComplete = () => {
-      if (dotInterval) clearInterval(dotInterval);
-      if (splashLoadingText) {
-        splashLoadingText.textContent = "";
-        splashLoadingText.classList.add("is-done");
-        // Type out "READY ✓" letter by letter
-        const doneText = "READY ✓";
-        let charIdx = 0;
-        const typeDone = setInterval(() => {
-          if (splashLoadingText) {
-            splashLoadingText.textContent = doneText.slice(0, charIdx + 1);
-            charIdx++;
-            if (charIdx >= doneText.length) clearInterval(typeDone);
-          }
-        }, 80);
-      }
-    };
-
-    const updateProgressBar = () => {
+    const updateProgress = (val) => {
+      loadProgress = Math.min(100, Math.max(0, val));
       if (splashProgressFill) {
         splashProgressFill.style.width = loadProgress + "%";
       }
-      if (splashProgressGlow) {
-        splashProgressGlow.style.left = "calc(" + loadProgress + "% - 2px)";
+      if (splashPercent) {
+        splashPercent.textContent = Math.round(loadProgress) + "%";
       }
     };
 
-    const startProgressSimulation = () => {
-      loadInterval = setInterval(() => {
-        // Faster loading curve: reaches 100% quickly
-        if (loadProgress < 40) {
-          loadProgress += 2.5 + Math.random() * 3;
-        } else if (loadProgress < 70) {
-          loadProgress += 1.5 + Math.random() * 2.5;
-        } else if (loadProgress < 90) {
-          loadProgress += 1.2 + Math.random() * 1.8;
-        } else if (loadProgress < 100) {
-          loadProgress += 0.8 + Math.random() * 1.2;
-        }
-        if (loadProgress >= 100) {
-          loadProgress = 100;
-          updateProgressBar();
-          clearInterval(loadInterval);
-          // Progress is full — show completion and dismiss
-          showLoadingComplete();
-          setTimeout(dismissSplash, 600);
-          return;
-        }
-        updateProgressBar();
-      }, 160);
-    };
-
-    const completeProgress = () => {
-      clearInterval(loadInterval);
-      // Smoothly animate from current to 100%
-      const completeStep = () => {
-        if (loadProgress < 100) {
-          loadProgress += 0.5;
-          if (loadProgress > 100) loadProgress = 100;
-          updateProgressBar();
-          if (loadProgress < 100) {
-            requestAnimationFrame(() => setTimeout(completeStep, 30));
-          }
-        }
-      };
-      completeStep();
-    };
-
-    // Track actual start time for minimum display duration
-    const splashStartTime = Date.now();
-    const MIN_SPLASH_DURATION = 1800; // Minimum 1.8 seconds display
-
-    // Generate floating splash particles
-    if (splashParticlesContainer && !reducedMotion) {
-      const spCanvas = document.createElement("canvas");
-      spCanvas.style.cssText = "position:absolute;inset:0;width:100%;height:100%";
-      splashParticlesContainer.appendChild(spCanvas);
-      const spCtx = spCanvas.getContext("2d");
-
-      const spw = () => splashScreen.clientWidth;
-      const sph = () => splashScreen.clientHeight;
-      spCanvas.width = spw();
-      spCanvas.height = sph();
-
-      const spParticles = Array.from({ length: 35 }, () => ({
-        x: Math.random() * spw(),
-        y: Math.random() * sph(),
-        r: 0.6 + Math.random() * 1.4,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        alpha: 0.15 + Math.random() * 0.35,
-        twinkleSpeed: 0.004 + Math.random() * 0.006,
-        phase: Math.random() * Math.PI * 2,
-      }));
-
-      let spRaf = null;
-      const spFrame = (ts) => {
-        spCtx.clearRect(0, 0, spw(), sph());
-        for (const p of spParticles) {
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < -10) p.x = spw() + 10;
-          if (p.x > spw() + 10) p.x = -10;
-          if (p.y < -10) p.y = sph() + 10;
-          if (p.y > sph() + 10) p.y = -10;
-          const tw = 0.55 + 0.45 * Math.sin(ts * p.twinkleSpeed + p.phase);
-          spCtx.fillStyle = "rgba(124, 92, 252," + (p.alpha * tw) + ")";
-          spCtx.beginPath();
-          spCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          spCtx.fill();
-        }
-        spRaf = requestAnimationFrame(spFrame);
-      };
-      spRaf = requestAnimationFrame(spFrame);
-
-      // Cleanup after splash is gone
-      const cleanupSpRaf = () => { cancelAnimationFrame(spRaf); };
-      window.addEventListener("load", () => {
-        setTimeout(cleanupSpRaf, 1200);
-      });
-    }
-
-    // Start progress simulation after a short delay
-    setTimeout(startProgressSimulation, 500);
-    // Start dot animation right away
-    startDotAnimation();
-
-    // Hide splash screen respecting minimum display time
     const dismissSplash = () => {
+      if (isFinished) return;
+      isFinished = true;
+      if (splashStatus) splashStatus.textContent = "Ready";
       splashScreen.classList.add("splash-out");
       setTimeout(() => {
         splashScreen.style.display = "none";
-      }, 600);
+      }, 450);
     };
 
-    window.addEventListener("load", () => {
+    // Smooth simulated progress curve that accelerates
+    loadInterval = setInterval(() => {
+      if (loadProgress < 40) {
+        loadProgress += 5 + Math.random() * 5;
+      } else if (loadProgress < 80) {
+        loadProgress += 3 + Math.random() * 4;
+      } else if (loadProgress < 96) {
+        loadProgress += 1.5 + Math.random() * 2;
+      }
+
+      if (loadProgress >= 96) {
+        loadProgress = 96;
+        clearInterval(loadInterval);
+      }
+      updateProgress(loadProgress);
+    }, 45);
+
+    const finishLoading = () => {
+      if (loadInterval) clearInterval(loadInterval);
+      updateProgress(100);
+
       const elapsed = Date.now() - splashStartTime;
       const remaining = Math.max(0, MIN_SPLASH_DURATION - elapsed);
 
-      // If progress hasn't reached 100% yet, speed it up
       setTimeout(() => {
-        if (loadProgress < 100 && loadInterval) {
-          clearInterval(loadInterval);
-          // Rapidly finish the remaining progress
-          const rushTo100 = () => {
-            if (loadProgress < 100) {
-              loadProgress += 3;
-              if (loadProgress > 100) loadProgress = 100;
-              updateProgressBar();
-              if (loadProgress < 100) {
-                requestAnimationFrame(() => setTimeout(rushTo100, 25));
-              } else {
-                showLoadingComplete();
-                setTimeout(dismissSplash, 500);
-              }
-            }
-          };
-          rushTo100();
-        }
-      }, remaining);
-    });
+        dismissSplash();
+      }, remaining + (reducedMotion ? 50 : 140));
+    };
 
-    // Fallback: force dismiss after timeout in case load event doesn't fire
+    // Check if document already loaded
+    if (document.readyState === "complete") {
+      finishLoading();
+    } else {
+      window.addEventListener("load", finishLoading);
+    }
+
+    // Fallback: force dismiss after timeout
     setTimeout(() => {
-      if (!splashScreen.classList.contains("splash-out")) {
-        if (loadInterval) clearInterval(loadInterval);
-        loadProgress = 100;
-        updateProgressBar();
-        showLoadingComplete();
-        setTimeout(dismissSplash, 500);
+      if (!isFinished) {
+        finishLoading();
       }
-    }, 5000);
+    }, 3000);
   }
 
   /**
